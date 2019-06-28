@@ -1,0 +1,69 @@
+body{
+
+    background-image: url("https://www.altonivel.com.mx/wp-content/uploads/2019/02/economia-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: padding-box;
+    
+}
+
+.option{
+    
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1px;
+    text-align: right;
+    color: #000000;
+}
+
+.text{
+
+font-weight: normal;
+font-size: 16px;
+color: #000000;
+
+}
+
+.login{
+
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+box-shadow: 2px 2px 1px rgba(247, 245, 245, 0.1);
+left: 34.03%;
+right: 34.03%;
+top: 24.8%;
+bottom: 24.8%;
+width: 460px;
+height: 516px;
+background: #F7F7F7;
+
+opacity: 0.6;
+}
+
+.boxes{
+
+background: rgb(255, 255, 255);
+border-radius: 2px;
+
+}
+
+.button{
+
+background: #3897F0;
+border-radius: 5px;
+font-family: Open Sans;
+font-style: normal;
+font-weight: 800;
+font-size: 15px;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 9px;
+padding-bottom: 9px;
+
+}
