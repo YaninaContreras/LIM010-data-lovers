@@ -1,0 +1,13 @@
+#statements{
+    display: none;
+}
+#statements.show{
+    display:block;}
+
+#login {
+    display:block;
+}
+#login.hide{
+    display:none; 
+}  
+
