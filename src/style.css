@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
 
     background-image: url("https://www.altonivel.com.mx/wp-content/uploads/2019/02/economia-2.jpg");
@@ -82,3 +83,18 @@ padding-bottom: 9px;
 =======
 }
 >>>>>>> 3d66d4c7148ecbe11ee687391c9990db9c8ecadd
+=======
+#statements{
+    display: none;
+}
+#statements.show{
+    display:block;}
+
+#login {
+    display:block;
+}
+#login.hide{
+    display:none; 
+}  
+
+>>>>>>> 9ae9de6a3cea5663d14fde62a4c4c38789eba43c
