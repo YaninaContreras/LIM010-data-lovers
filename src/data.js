@@ -3,16 +3,12 @@
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
 
-const data = (wbdata) => {
-  const vacio=[]
-  for(let i=0;i<iwbdata;i++){
-    vacio.push({
-      Country:data[i].countryName,
-
-    })
+const wbdata = (data) => {
+  const vacio = []
+  for (let i = 0; i < data; i++) {
+    vacio.push(Object.assign({} ; data[i]));
   }
-  return vacio;z
+}
+return vacio;
 };
 
-window.worldbank.WORLDBANK={
-  wbdata}
