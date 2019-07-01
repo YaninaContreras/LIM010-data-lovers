@@ -3,8 +3,10 @@
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
 
-const example = () => {
-  return 'example';
+console.log(WORLDBANK);
+
+const encode = () => { 
+  return 'example'; 
 };
 
-window.example = example;
+window.cipher = encode; 
