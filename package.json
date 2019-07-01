@@ -17,10 +17,18 @@
   },
   "devDependencies": {
     "eslint": "^6.0.1",
+<<<<<<< HEAD
+    "eslint-config-google": "^0.13.0",
+=======
+>>>>>>> c9f4bde0faf4641a050f65c9329ef1f9822cb0c8
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
+<<<<<<< HEAD
+    "eslint-plugin-react": "^7.14.2",
+=======
+>>>>>>> c9f4bde0faf4641a050f65c9329ef1f9822cb0c8
     "eslint-plugin-standard": "^4.0.0"
   }
 }
