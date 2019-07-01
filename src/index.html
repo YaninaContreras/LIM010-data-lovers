@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main>
-      <div class= 'login'  id='login' >
-        <form action='login'>
-          <h1 id="email" class="text">Correo Electrónico</h1>
-         <input type="text" class="boxes"id="user">
-          <h1 id="emailpsw" class="text">Contraseña</h1> 
-         <input type="password"class="boxes"id="psw">
-         <h2 class="option">¿Olvidaste tu contraseña?</h2>
-         <input type="button"class="button" id="next"value="INGRESA">
-         <div id="fail"></div>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <section class='primerapantalla' id="primerapantalla">
+      <div class='login' id="login">
+        <form>
+          <h1 class='correo cyc'>Correo Electrónico</h1>
+          <input type='text' class='inputcorreo input' id='inputcorreo'>
+          <h1 class='contraseña cyc'>Contraseña</h1>
+          <input type='password' class='inputcontraseña input' id='inputcontraseña'>
+          <h2 class="olvidaste">¿Olvidaste tu contraseña?</h2>
+          <input id="ingresa" type="button" class="ingresa" value="INGRESA">
+          <h2 class="registrate">¿No tienes una cuenta? Registrate</h2>
+          <h2 id='error' class='error'></h2>
         </form>
       </div>
-      <div class="statement" id="statements">
-        <h1>worldbank</h1>-
-      </div>
+    </section>
 
-    </main>
-    <footer></footer>
-    <!-- <script src="./data/lol/lol.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+    <section class='segundapantalla' id="segundapantalla">
+        <div>
+
+        </div>
+    </section> 
+    
+  </main>
+  <footer></footer>
+  <!-- <script src="./data/lol/lol.js"></script> -->
+  <!-- <script src="./data/pokemon/pokemon.js"></script> -->
+  <!-- <script src="./data/worldbank/worldbank.js"></script> -->
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

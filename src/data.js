@@ -3,8 +3,16 @@
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
 
-const example = () => {
-  return 'example';
+const data = (wbdata) => {
+  const vacio=[]
+  for(let i=0;i<iwbdata;i++){
+    vacio.push({
+      Country:data[i].countryName,
+
+    })
+  }
+  return vacio;
 };
 
-window.example = example;
+window.worldbank.WORLDBANK={
+  wbdata}

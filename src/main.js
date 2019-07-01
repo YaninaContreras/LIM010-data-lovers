@@ -1,15 +1,25 @@
-const email = document.getElementById("user")
-const psw = document.getElementById("psw")
-const button = document.getElementById("next")
-const fail =document.getElementById ("fail")
-const firstsreen = document.getElementById("login")
-const secondsreen =document.getElementById("statements")
-button.addEventListener("click", () => {
-  if (email.value === "LABORATORIA" && psw.value === "LABORATORIA") {
-    secondsreen.classList.toggle("show")  
-    firstsreen.classList.toggle("hide")
-  }
-  else {
-    fail.innerHTML="contraseña incorrecta"
-  }
+/* Manejo del DOM */
+
+/* llamando IDs*/
+
+const inputcorreo = document.getElementById("inputcorreo")
+const inputcontraseña = document.getElementById("inputcontraseña")
+const ingresa = document.getElementById("ingresa")
+const error = document.getElementById("error")
+const segundapantalla = document.getElementById("segundapantalla")
+ingresa.addEventListener("click", () => {
+    if (inputcorreo.value === "LABORATORIA" && inputcontraseña.value === "LABORATORIA") {
+        segundapantalla.classList.toggle("show")
+        login.classList.toggle("hide")
+    }
+    else {
+        error.innerHTML = "contraseña incorrecta"
+    }
 })
+const worldata=WORLDBANK.worldbank
+const mostrardata=(wbdata)=>{
+  for(let i=0; i<wbdata;i++){
+    let llamado=`
+
+  }
+}
