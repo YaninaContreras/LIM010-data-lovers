@@ -11,19 +11,23 @@ ingresa.addEventListener('click', () => {
     login.classList.toggle('hide')
   } else {
     error.innerHTML = 'contraseña incorrecta'
-  };
-});
-
-const worldbank = WORLDBANK;
-const mostrardata = (data) => {
-  let mostrar = "";
-  for (let i = 0; i < data; i++) {
-    let llamado.push = (´
-    <div class="first"> 
-     <input type="text">${element.data}</input>
-    </div>
-    mostrar+=llamado
-    )
   }
-  return mostrar 
-} 
+}
+)
+const datarray = Object.entries(WORLDBANK)
+// eslint-disable-next-line no-undef
+const data = copiardata(datarray)
+const Peruindicadores = tenerdata(data, 0)
+const Mexicoindicadores = tenerdata(data, 1)
+const Chileindicadores = tenerdata(data, 2)
+const Brasilindicadores = tenerdata(data, 3)
+
+const filterdemogperu= demográficofilter(Peruindicadores)
+const filterdemogmexico= demográficofilter(Mexicoindicadores)
+const filterdemogchile= demográficofilter(Chileindicadores)
+const filterdemogbrasil= demográfico(Brasilindicadores)
+
+const filterlabperu=laboralfilter(Peruindicadores)
+const filterlabmexico=laboralfilter(Mexicoindicadores)
+const filterlabchile=laboralfilter(Chileindicadores)
+const filterlabbrasil=laboralfilter(Brasilindicadores)
