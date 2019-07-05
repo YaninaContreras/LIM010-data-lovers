@@ -14,20 +14,31 @@ ingresa.addEventListener('click', () => {
   }
 }
 )
-const datarray = Object.entries(WORLDBANK)
-// eslint-disable-next-line no-undef
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+const perucontenedor = document.getElementById('perutabla')
+const peruboton = document.getElementById('Peru')
+
+const datarray = Object.values(WORLDBANK)
 const data = copiardata(datarray)
-const Peruindicadores = tenerdata(data, 0)
-const Mexicoindicadores = tenerdata(data, 1)
-const Chileindicadores = tenerdata(data, 2)
-const Brasilindicadores = tenerdata(data, 3)
 
-const filterdemogperu= demográficofilter(Peruindicadores)
-const filterdemogmexico= demográficofilter(Mexicoindicadores)
-const filterdemogchile= demográficofilter(Chileindicadores)
-const filterdemogbrasil= demográfico(Brasilindicadores)
+const peruindicadores = tenerdata(data, 0)
+console.log(peruindicadores)
+// contenedor.innerHTML = peruindicadores
+const mexicoindicadores = tenerdata(data, 1)
+const chileindicadores = tenerdata(data, 2)
+const brasilindicadores = tenerdata(data, 3)
 
-const filterlabperu=laboralfilter(Peruindicadores)
-const filterlabmexico=laboralfilter(Mexicoindicadores)
-const filterlabchile=laboralfilter(Chileindicadores)
-const filterlabbrasil=laboralfilter(Brasilindicadores)
+// const filterdemogperu = demográficofilter(peruindicadores)
+// const filterdemogmexico = demográficofilter(mexicoindicadores)
+// const filterdemogchile = demográficofilter(chileindicadores)
+// const filterdemogbrasil = demográficofilter(brasilindicadores)
+
+// const filterlabperu = laboralfilter(peruindicadores)
+// const filterlabmexico = laboralfilter(mexicoindicadores)
+// const filterlabchile = laboralfilter(chileindicadores)
+// const filterlabbrasil = laboralfilter(brasilindicadores)
+
+peruboton.addEventListener('click', () => {
+  perucontenedor.innerHTML = toString(peruindicadores)
+})
