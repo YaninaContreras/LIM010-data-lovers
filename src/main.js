@@ -21,10 +21,6 @@ const peruboton = document.getElementById('Peru')
 
 const datarray = Object.values(WORLDBANK)
 const data = copiardata(datarray)
-
-const peruindicadores = tenerdata(data, 0)
-console.log(peruindicadores)
-// contenedor.innerHTML = peruindicadores
 const mexicoindicadores = tenerdata(data, 1)
 const chileindicadores = tenerdata(data, 2)
 const brasilindicadores = tenerdata(data, 3)
