@@ -1,5 +1,45 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
+<<<<<<< HEAD
+const array = (dataparametro) => {
+  const wbdata = [];
+  for (let i = 0; i < dataparametro.length; i++) {
+    wbdata.push(Object.assign({}, dataparametro[i]));
+  }
+  return wbdata;
+};
+const tenerdata = (paises, index) => {
+  const data = paises[index];
+  return data['1'].indicators
+};
+
+const demografico = (element) => {
+  let demogcode = element.indicatorCode;
+  let initdemog = demogcode.slice(0, 6);
+  return initdemog === 'SP.POP';
+};
+
+const laboral = (element) => {
+  let labocode = element.indicatorCode;
+  let initlab = labocode.slice(0, 6);
+  return initlab === 'SE.PRM';
+};
+
+const demografilter = (data) => {
+  let arrfilter= data.filter (demografico);
+  return arrfilter;
+};
+const labofilter = (data) => {
+  let arrfilter = data.filter (laboral);
+  return arrfilter;
+};
+window.worldbank = {
+  demografico : demografico,
+  laboral : laboral,
+  demografilter:demografilter,
+  labofilter : labofilter,
+};
+=======
 const copiardata = (Dataparametro) => {
   const datawb = [ ]
   for (let i = 0; i < 1399; i++) {
@@ -35,3 +75,4 @@ window.worldbank = {
   // demográficofilter,
   // laboralfilter
 }
+>>>>>>> c295f4b8cbe84c0dc3475d63bd57dc0444bc0f04
