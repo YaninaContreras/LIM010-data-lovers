@@ -35,7 +35,7 @@ const filterlabchile = labofilter(chileindicadores);
 const filterlabbrasil = labofilter(brasilindicadores);
 let arrayIndicators= new Array();
 for(let i=0; i<=26;i++) {
-arrayIndicators[i]=[i].forEach (filterdemogperu).indicatorName;
+arrayIndicators[i]=[i].forEach(indicatorName in filterdemogperu)};
 }
 arrayIndicators.sort();
 document.getElementById('peru-tabla').innerHTML=arrayIndicators
