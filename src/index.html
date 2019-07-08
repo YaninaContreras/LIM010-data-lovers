@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <img src="banco mundial-01.png" class="bm" alt="banco-mundial">
+  </header>
+  <main>
+    <section class='primerapantalla' id="primerapantalla">
+      <div class='login' id="login">
+        <form>
+          <h1 class='correo cyc'>Correo Electrónico</h1>
+          <input type='text' class='inputcorreo input' value="LABORATORIA" id='inputcorreo'>
+          <h1 class='contraseña cyc'>Contraseña</h1>
+          <input type='password' class='inputcontraseña input' value="LABORATORIA" id='inputcontraseña'>
+          <h2 class="olvidaste">¿Olvidaste tu contraseña?</h2>
+          <input id="ingresa" type="button" class="ingresa" value="INGRESA">
+          <h2 class="registrate">¿No tienes una cuenta? Registrate</h2>
+          <h2 id='error' class='error'></h2>
+        </form>
+      </div>
+    </section>
+
+    <section class='segundapantalla' id="segundapantalla">
+      <div class="flags">
+          <button type ="submit" > <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="brasil" id="brasil" class="banderas"></button>
+          <button type ="submit"> <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" alt="chile" id="chile" class="banderas"></button>      
+          <button type ="submit"> <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="mexico" id="mexico" class="banderas"></button>         
+          <button type ="submit" id="peru"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg" alt="peru"  class="banderas"></button>
+          <div id="peru-tabla"></div>                 
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="./data/worldbank/worldbank.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
