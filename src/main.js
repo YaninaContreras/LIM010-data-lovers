@@ -16,6 +16,7 @@ ingresa.addEventListener('click', () => {
 )
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
+<<<<<<< HEAD
 const  datarray= Object.entries(WORLDBANK);
 const data = array(datarray);
 const peruindicadores = tenerdata(data, 0);
@@ -83,3 +84,31 @@ const showDetalle = (contenedor, indicador) => {
 
   contenedor.appendChild(tbl);
 };
+=======
+const perucontenedor = document.getElementById('perutabla')
+const peruboton = document.getElementById('Peru')
+
+const datarray = Object.values(WORLDBANK)
+const data = copiardata(datarray)
+
+const peruindicadores = tenerdata(data, 0)
+console.log(peruindicadores)
+// contenedor.innerHTML = peruindicadores
+const mexicoindicadores = tenerdata(data, 1)
+const chileindicadores = tenerdata(data, 2)
+const brasilindicadores = tenerdata(data, 3)
+
+// const filterdemogperu = demográficofilter(peruindicadores)
+// const filterdemogmexico = demográficofilter(mexicoindicadores)
+// const filterdemogchile = demográficofilter(chileindicadores)
+// const filterdemogbrasil = demográficofilter(brasilindicadores)
+
+// const filterlabperu = laboralfilter(peruindicadores)
+// const filterlabmexico = laboralfilter(mexicoindicadores)
+// const filterlabchile = laboralfilter(chileindicadores)
+// const filterlabbrasil = laboralfilter(brasilindicadores)
+
+peruboton.addEventListener('click', () => {
+  perucontenedor.innerHTML = toString(peruindicadores)
+})
+>>>>>>> c295f4b8cbe84c0dc3475d63bd57dc0444bc0f04
