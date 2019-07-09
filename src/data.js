@@ -1,58 +1,24 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
-const array = (dataparametro) => {
-  const wbdata = [];
-  for (let i = 0; i < dataparametro.length; i++) {
-    wbdata.push(Object.assign({}, dataparametro[i]));
-  }
-  return wbdata;
-};
-const tenerdata = (paises, index) => {
-  const data = paises[index];
-  return data['1'].indicators
-};
+//console.log(WORLDBANK.PER.indicators[0].indicatorCode.substring(0,6));
 
-const demografico = (element) => {
-  let demogcode = element.indicatorCode;
-  let initdemog = demogcode.slice(0, 6);
-  return initdemog === 'SP.POP';
-};
-
-const laboral = (element) => {
-  let labocode = element.indicatorCode
-  let initlab = labocode.slice(0, 6);
-  return initlab === 'SE.PRM';
-};
-
-const demografilter = (data) => {
-  let arrfilter= data.filter (demografico)
-  return arrfilter;
-};
-const labofilter = (data) => {
-  let arrfilter = data.filter (laboral);
-  return arrfilter;
-};
-
-const indicatorsperu = () => {
-  let demoperu = []
-  let labperu = []
-
-  for (let i = 0; i < 26; i++) {
-    demoperu.push(filterdemogperu[i].indicatorName)
-    labperu.push(filterlabperu[i].indicatorName)
-  }
-  return {
-    demoperu: demoperu,
-    labperu: labperu
-
-  }
+const indicadoresPorPais = (string, data) => {
+  return data[string].indicators
 }
+
+const arrayIndicadoresPorPais = indicadoresPorPais('PER', WORLDBANK)
+
+const seleccionarIndicadorPorCodigo = (string, array) => {
+  console.log(string)
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i].indicatorName)
+  };
+}
+seleccionarIndicadorPorCodigo('SP.POP', arrayIndicadoresPorPais);
+
 window.worldbank = {
-  demografico: demografico,
-  laboral: laboral,
-  demografilter: demografilter,
-  labofilter: labofilter,
-  indicatorsperu: indicatorsperu
+  indicadoresPorPais:indicadoresPorPais,
+  seleccionarIndicadorPorCodigo: seleccionarIndicadorPorCodigo,
 
 }

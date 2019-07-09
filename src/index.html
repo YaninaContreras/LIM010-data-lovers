@@ -39,20 +39,12 @@
             alt="peru" class="banderas"></button>
         <div id="peru-tabla"></div>
       </div>
-      <div class="indicadores">
-        <button id="boton-demografico" type="button">Demogáfico</button>
-        <button id="boton-laboral" type="button">Laboral</button>
-      </div>
-      <form id=ordenado method="post">
-        <select id="population-peru-Select" name="ordenar"
-          onchange="selectChangeTextPopulation('population-peru-Select')">
-          <option value="0" selected>Original</option>
-          <option value="3">Alfabéticamente</option>
-        </select>
-      </form>
-      <ul>
-        <li><a class="indicator-name"></a></li>
-      </ul>
+      <select  id='tipodeindicador' >
+        <option value="">Seleccione el tipo indicador …</option>
+        <option value="laboral">Laboral</option>
+        <option value="demográfico">Demográfico</option>
+      </select>
+        <div class="resultado" id='resultado'></div>
       <div id="tables-peru" class="tables-of-peru"
     </section>
   </main>
