@@ -13,3 +13,8 @@ ingresa.addEventListener('click', () => {
     error.innerHTML = 'contraseña incorrecta'
   };
 });
+
+const paises= ['PER', 'MEX','BRA','CHL'];
+for (let i=0; i <paises.length ; i++){
+console.log(WORLDBANK[paises[i]].indicators[0].indicatorName)
+};
