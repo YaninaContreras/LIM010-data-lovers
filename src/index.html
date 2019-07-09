@@ -29,43 +29,31 @@
 
     <section class='segundapantalla' id="segundapantalla">
       <div class="flags">
-<<<<<<< HEAD
-          <button type ="submit" > <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="brasil" id="brasil" class="banderas"></button>
-          <button type ="submit"> <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" alt="chile" id="chile" class="banderas"></button>      
-          <button type ="submit"> <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="mexico" id="mexico" class="banderas"></button>         
-          <button type ="submit" id="peru"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg" alt="peru"  class="banderas"></button>
-          <div id="peru-tabla"></div>                 
-=======
-        <li>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="brasil" id="brasil"
-            class="banderas">
-        </li>
-        <li>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" alt="chile" id="chile"
-            class="banderas">
-        </li>
-        <li>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="mexico" id="mexico"
-            class="banderas">
-        </li>
-        <li>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg" alt="peru" id="peru"
-            class="banderas">
-        </li>
-        <button id="Peru" value="Perú"></button>
+        <button type="submit"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
+            alt="brasil" id="brasil" class="banderas"></button>
+        <button type="submit"> <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg"
+            alt="chile" id="chile" class="banderas"></button>
+        <button type="submit"> <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
+            alt="mexico" id="mexico" class="banderas"></button>
+        <button type="submit" id="peru"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg"
+            alt="peru" class="banderas"></button>
+        <div id="peru-tabla"></div>
       </div>
       <div class="indicadores">
-        <h1>INDICADORES</h1>
-        <input> DEMOGRÁFICOS</input>
-        <input> ECONÓMICOS</input>
-        <input> COMERCIALES</input>
+        <button id="boton-demografico" type="button">Demogáfico</button>
+        <button id="boton-laboral" type="button">Laboral</button>
       </div>
-      <div id="perutabla"></div>
-
-
-
->>>>>>> c295f4b8cbe84c0dc3475d63bd57dc0444bc0f04
-      </div>
+      <form id=ordenado method="post">
+        <select id="population-peru-Select" name="ordenar"
+          onchange="selectChangeTextPopulation('population-peru-Select')">
+          <option value="0" selected>Original</option>
+          <option value="3">Alfabéticamente</option>
+        </select>
+      </form>
+      <ul>
+        <li><a class="indicator-name"></a></li>
+      </ul>
+      <div id="tables-peru" class="tables-of-peru"
     </section>
   </main>
   <footer></footer>
