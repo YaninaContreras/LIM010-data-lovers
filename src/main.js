@@ -17,6 +17,6 @@ ingresa.addEventListener('click', () => {
 const selectElement = document.getElementById('tipodeindicador');
 
 selectElement.addEventListener('change', (event) => {
-  const resultado = document.getElementById('resultado')
-  resultado.textContent = `seleccionarIndicadorPorCodigo ${event.target.value}`;
+  const resultado = event.target.value
+  resultado.textContent = ;
 });
