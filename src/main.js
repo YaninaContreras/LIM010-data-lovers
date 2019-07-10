@@ -5,6 +5,7 @@ const ingresa = document.getElementById('ingresa')
 const error = document.getElementById('error')
 const segundapantalla = document.getElementById('segundapantalla')
 const login = document.getElementById('login')
+
 ingresa.addEventListener('click', () => {
   if (inputcorreo.value === 'LABORATORIA' && inputcontraseña.value === 'LABORATORIA') {
     segundapantalla.classList.toggle('show')
@@ -14,9 +15,11 @@ ingresa.addEventListener('click', () => {
   }
 }
 )
+
 const selectElement = document.getElementById('tipodeindicador');
 
 selectElement.addEventListener('change', (event) => {
   const resultado = event.target.value
-  resultado.textContent = ;
-});
+  const arrayresult =resultado.split('-')[0]
+}
+)

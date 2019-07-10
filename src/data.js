@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
-//console.log(WORLDBANK.PER.indicators[0].indicatorCode.substring(0,6));
 
 const indicadoresPorPais = (string, data) => {
   return data[string].indicators
@@ -14,7 +13,7 @@ const seleccionarIndicadorPorCodigo = (string, array) => {
   for (let i = 0; i < array.length; i++) {
     let selectorindicadores = '<option disabled selected>----Seleccione un indicador----</option>'
     console.log(array[i].indicatorName)
-    selectorindicadores += `<option value='${array[i].indicatorName}</option>`
+    selectorindicadores += `<option value= ' ${array[i].indicatorName.split('-')[0]}-${i}'>${array[i].indicatorName}</option>`
   };
   return selectorindicadores
 }
