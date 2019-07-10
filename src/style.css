@@ -12,7 +12,6 @@ header{
 body{
 
     background-image: url("https://media.metrolatam.com/2019/01/10/ap19008764253286-a695c9c080d4623ffa111fefd08204f2-1200x600.jpg");
-    opacity: 0.6;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -55,8 +54,7 @@ top: 29%;
 bottom: 24.8%;
 width: 460px;
 height: 516px;
-background: #F7F7F7;
-opacity: 0.6;
+background: rgba(247, 247, 247, 0.6);
 }
 
 .input{

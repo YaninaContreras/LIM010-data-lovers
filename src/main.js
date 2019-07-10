@@ -12,6 +12,7 @@ ingresa.addEventListener('click', () => {
     login.classList.toggle('hide')
   } else {
     error.innerHTML = 'contraseña incorrecta'
+
   }
 }
 )
@@ -23,3 +24,10 @@ selectElement.addEventListener('change', (event) => {
   const arrayresult =resultado.split('-')[0]
 }
 )
+  };
+});
+
+const paises= ['PER', 'MEX','BRA','CHL'];
+for (let i=0; i <paises.length ; i++){
+console.log(WORLDBANK[paises[i]].indicators[0].indicatorName)
+};

@@ -1,3 +1,4 @@
+
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
@@ -20,7 +21,9 @@ const seleccionarIndicadorPorCodigo = (string, array) => {
 seleccionarIndicadorPorCodigo('SP.POP', arrayIndicadoresPorPais);
 
 window.worldbank = {
+
   indicadoresPorPais:indicadoresPorPais,
   seleccionarIndicadorPorCodigo: seleccionarIndicadorPorCodigo,
 
 }
+ 
