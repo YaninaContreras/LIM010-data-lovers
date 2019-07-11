@@ -12,6 +12,7 @@ ingresa.addEventListener('click', () => {
     login.classList.toggle('hide')
   } else {
     error.innerHTML = 'contraseña incorrecta'
+
   }
 }
 )
@@ -25,4 +26,3 @@ console.log(pais)
 
 }
 )
-
