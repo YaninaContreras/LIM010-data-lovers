@@ -6,7 +6,7 @@
 const indicadoresPorPais = (string, data) => {
   let arraypaises = ''
   for (let i = 0; i < array.length; i++) {
-    arraypaises+= <input type="radio" class=" pais ${paises[i].codigo}" name="paises" value='${paises[i].codigo}'/><label>${paises[i].pais}</label>
+    arraypaises+= `<input type="radio" class=" pais ${paises[i].codigo}" name="paises" value='${paises[i].codigo}'/><label>${paises[i].pais}</label>`
 
   }
   return data[string].indicators

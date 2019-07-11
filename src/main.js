@@ -18,11 +18,19 @@ ingresa.addEventListener('click', () => {
 )
 const paises = [{pais: 'Brasil', codigo: 'BRA'}, {pais: 'Chile', codigo: 'CHL'}, {pais: 'Mexico', codigo: 'MEX'}, {pais: 'Perú', codigo:'PER'}]
 const selectElementIndicador = document.getElementById('tipodeindicador')
+const selectElementPais =document.getElementById('listadepaises')
 
-selectElementIndicador.addEventListener('change', (event)=>{
+selectElementPais.addEventListener('change', (event)=>{
 const pais = event.target.value
-indicadoresPorPais.innerHTML = arrayIndicadoresPorCodigo(arrayIndicadoresPorCodigo(paisdata(pais)));
+selectElementIndicador.innerHTML = arrayIndicadoresPorCodigo(arrayIndicadoresPorPais(paisdata(pais)));
 console.log(pais)
-
 }
 )
+selectElementIndicador.addEventListener('change',(event)=>{
+  const indicador = event.target.value;
+  const indicator=indicador.split('-')[0];
+  const intervalo = indicador.split('-')[1];
+  
+}
+)
+
