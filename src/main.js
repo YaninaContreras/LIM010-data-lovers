@@ -15,11 +15,14 @@ ingresa.addEventListener('click', () => {
   }
 }
 )
+const paises = [{pais: 'Brasil', codigo: 'BRA'}, {pais: 'Chile', codigo: 'CHL'}, {pais: 'Mexico', codigo: 'MEX'}, {pais: 'Perú', codigo:'PER'}]
+const selectElementIndicador = document.getElementById('tipodeindicador')
 
-const selectElement = document.getElementById('tipodeindicador');
+selectElementIndicador.addEventListener('change', (event)=>{
+const pais = event.target.value
+indicadoresPorPais.innerHTML = arrayIndicadoresPorCodigo(arrayIndicadoresPorCodigo(paisdata(pais)));
+console.log(pais)
 
-selectElement.addEventListener('change', (event) => {
-  const resultado = event.target.value
-  const arrayresult =resultado.split('-')[0]
 }
 )
+
