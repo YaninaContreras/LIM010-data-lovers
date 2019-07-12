@@ -1,4 +1,3 @@
-
 const inputcorreo = document.getElementById('inputcorreo')
 const inputcontraseña = document.getElementById('inputcontraseña')
 const ingresa = document.getElementById('ingresa')
@@ -12,25 +11,8 @@ ingresa.addEventListener('click', () => {
     login.classList.toggle('hide')
   } else {
     error.innerHTML = 'contraseña incorrecta'
-
   }
 }
 )
-const paises = [{pais: 'Brasil', codigo: 'BRA'}, {pais: 'Chile', codigo: 'CHL'}, {pais: 'Mexico', codigo: 'MEX'}, {pais: 'Perú', codigo:'PER'}]
-const selectElementIndicador = document.getElementById('tipodeindicador')
-const selectElementPais =document.getElementById('listadepaises')
 
-selectElementPais.addEventListener('change', (event)=>{
-const pais = event.target.value
-selectElementIndicador.innerHTML = arrayIndicadoresPorCodigo(arrayIndicadoresPorPais(paisdata(pais)));
-console.log(pais)
-}
-)
-selectElementIndicador.addEventListener('change',(event)=>{
-  const indicador = event.target.value;
-  const indicator=indicador.split('-')[0];
-  const intervalo = indicador.split('-')[1];
-  
-}
-)
 

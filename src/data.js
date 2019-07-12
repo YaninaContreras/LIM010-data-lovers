@@ -1,43 +1,41 @@
 
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-
-
-const indicadoresPorPais = (string, data) => {
-  let arraypaises = ''
-  for (let i = 0; i < array.length; i++) {
-    arraypaises+= `<input type="radio" class=" pais ${paises[i].codigo}" name="paises" value='${paises[i].codigo}'/><label>${paises[i].pais}</label>`
-
+const selectElementIndicador = document.getElementById('tipodeindicador')
+const selectElementPais = document.getElementById('listadepaises')
+const selectElementPaisIndicator = document.getElementById('resultado')
+const paises = Object.keys(WORLDBANK)
+const indicadoresPorPais = (string) => {
+  let paises1 = `<option>Seleccionar un país</option>`
+  for (let i = 0; i < string.length; i++) {
+    paises1 += `<option value=${string[i]}>${string[i]}</option>`
   }
-  return data[string].indicators
+  selectElementPais.innerHTML = paises1
 }
+
 const arrayIndicadoresPorPais = indicadoresPorPais(paises, WORLDBANK)
-
-const seleccionarIndicadorPorCodigo = (string, array) => {
-  console.log(string)
-  let nombredeindicadores = `<option disabled selected>Seleccione un indicador</option>`
-  for (let i = 0; i < array.length; i++) {
-    console.log(array[i].indicatorName)
-    nombredeindicadores += `<option value='${array[i].indicatorName}-${i}'>${array[i]}</option>`
+let indicadores = `<option>Seleccionar un país</option>`
+selectElementPais.addEventListener('change', (event) => {
+  const arrayindicadores = WORLDBANK[event.target.value].indicators
+  for (let i = 0; i < arrayindicadores.length; i++) {
+    indicadores += `<option id=${i} value=${arrayindicadores[i].indicatorName}>${arrayindicadores[i].indicatorName}</option>`
   }
-  return nombredeindicadores
-}
-const arrayIndicadoresPorCodigo = seleccionarIndicadorPorCodigo('SP.POP', arrayIndicadoresPorPais);
+  selectElementIndicador.innerHTML = indicadores
+})
+selectElementIndicador.addEventListener('change', (event) => {
+  const arrayindicadorespais = WORLDBANK.PER.indicators[event.target.id]
 
-const indicadorpais = (array) => {
-  let newarray = []
-  for (let i = 0; i < array.length; i++) {
-    newarray.push(array[i].indicatorName)
+  for (let i = 0; i < arrayindicadorespais.length; i++) {
+    console.log(event.target.id)
+    console.log(WORLDBANK.PER.indicators[event.target.id])
   }
-  return newarray
 }
 
+)
 
 window.worldbank = {
   indicadoresPorPais: indicadoresPorPais,
-  seleccionarIndicadorPorCodigo: seleccionarIndicadorPorCodigo,
-  arrayIndicadoresPorCodigo: arrayIndicadoresPorCodigo,
   arrayIndicadoresPorPais: arrayIndicadoresPorPais,
-  indicadorpais: indicadorpais
+  paises: paises
 }
 
