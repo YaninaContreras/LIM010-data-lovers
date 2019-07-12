@@ -64,7 +64,10 @@ border-radius: 2px;
 
 }
 .flags{
-    flex: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 .banderas{
 
