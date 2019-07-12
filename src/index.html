@@ -28,36 +28,23 @@
     </section>
 
     <section class='segundapantalla' id="segundapantalla">
-      <div class="flags">
-        <li>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="brasil" id="brasil"
-            class="banderas">
-        </li>
-        <li>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" alt="chile" id="chile"
-            class="banderas">
-        </li>
-        <li>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg" alt="mexico" id="mexico"
-            class="banderas">
-        </li>
-        <li>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg" alt="peru" id="peru"
-            class="banderas">
-        </li>
-        <button id="Peru" value="Perú"></button>
+            <div id="flags"class="flags">
+        <button type="submit"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg"
+            alt="brasil" id="brasil" class="banderas"></button>
+        <button type="submit"> <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg"
+            alt="chile" id="chile" class="banderas"></button>
+        <button type="submit"> <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
+            alt="mexico" id="mexico" class="banderas"></button>
+        <button type="submit" id="peru"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg"
+            alt="peru" class="banderas"></button>
+        <div id="peru-tabla"></div>
       </div>
-      <div class="indicadores">
-        <h1>INDICADORES</h1>
-        <input> DEMOGRÁFICOS</input>
-        <input> ECONÓMICOS</input>
-        <input> COMERCIALES</input>
-      </div>
-      <div id="perutabla"></div>
-
-
-
-      </div>
+      <select  id='tipodeindicador' >
+        <option value="">Seleccione el tipo indicador …</option>
+      
+      </select>
+        <div class="resultado" id='resultado'></div>
+      <div id="tables-peru" class="tables-of-peru"></div>
     </section>
   </main>
   <footer></footer>

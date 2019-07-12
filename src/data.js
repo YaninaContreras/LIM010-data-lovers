@@ -1,12 +1,26 @@
-/* Manejo de data */
 
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 
-/*const wbdata = (data) => {
-  const vacio = []
-  for (let i = 0; i < data; i++) {
-    vacio.push(Object.assign({} ; data[i]));
-  }
-  return datawb
-}; 
+
+const indicadoresPorPais = (string, data) => {
+  return data[string].indicators
+}
+
+const arrayIndicadoresPorPais = indicadoresPorPais('PER', WORLDBANK)
+
+const seleccionarIndicadorPorCodigo = (string, array) => {
+  //console.log(string)
+  for (let i = 0; i < array.length; i++) {
+    return(array[i].indicatorName)
+  };
+  return selectorindicadores
+}
+seleccionarIndicadorPorCodigo('SP.POP', arrayIndicadoresPorPais);
+
+window.worldbank = {
+
+  indicadoresPorPais:indicadoresPorPais,
+  seleccionarIndicadorPorCodigo: seleccionarIndicadorPorCodigo,
+}
+ 
