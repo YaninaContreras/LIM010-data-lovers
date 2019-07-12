@@ -1,4 +1,3 @@
-
 const inputcorreo = document.getElementById('inputcorreo')
 const inputcontraseña = document.getElementById('inputcontraseña')
 const ingresa = document.getElementById('ingresa')
@@ -12,22 +11,8 @@ ingresa.addEventListener('click', () => {
     login.classList.toggle('hide')
   } else {
     error.innerHTML = 'contraseña incorrecta'
-
   }
 }
 )
 
-const selectElement = document.getElementById('tipodeindicador');
 
-selectElement.addEventListener('change', (event) => {
-  const resultado = event.target.value
-  const arrayresult =resultado.split('-')[0]
-}
-)
-  };
-});
-
-const paises= ['PER', 'MEX','BRA','CHL'];
-for (let i=0; i <paises.length ; i++){
-console.log(WORLDBANK[paises[i]].indicators[0].indicatorName)
-};
