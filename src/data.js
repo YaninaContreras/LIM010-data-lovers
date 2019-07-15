@@ -4,6 +4,9 @@
 const selectElementIndicador = document.getElementById('tipodeindicador')
 const selectElementPais = document.getElementById('listadepaises')
 const selectElementPaisIndicator = document.getElementById('resultado')
+
+
+//seleccionando indicadores por pais//
 const paises = Object.keys(WORLDBANK)
 const indicadoresPorPais = (string) => {
   let paises1 = `<option>Seleccionar un país</option>`
@@ -23,20 +26,22 @@ selectElementPais.addEventListener('change', (event) => {
   selectElementIndicador.innerHTML = indicadores
 })
 
-selectElementIndicador.addEventListener('change', (event) => {
-  const arrayindicadorespais = WORLDBANK.PER.indicators[event.target.id]
 
-  for (let i = 0; i < arrayindicadorespais.length; i++) {
-    console.log(event.target.id)
-    console.log(WORLDBANK.PER.indicators[event.target.id])
-  }
-}
+//seleccionando indicadores por codigo //
 
-)
+const seleccionarIndicadorPorCodigo = (string, array) => {
+  //console.log(string)
+  for (let i = 0; i < array.length; i++) {
+    return(array[i].indicatorName)
+  };
+  return selectorindicadores
+};
 
+//creando variables globales//
 window.worldbank = {
   indicadoresPorPais: indicadoresPorPais,
   arrayIndicadoresPorPais: arrayIndicadoresPorPais,
-  paises: paises
+  paises: paises,
+  seleccionarIndicadorPorCodigo: seleccionarIndicadorPorCodigo
 }
 
