@@ -37,6 +37,7 @@ const seleccionarIndicadorPorCodigo = (string, array) => {
   return selectorindicadores
 };
 
+
 //creando variables globales//
 window.worldbank = {
   indicadoresPorPais: indicadoresPorPais,
