@@ -14,7 +14,7 @@ const indicadoresPorPais = (string) => {
 }
 
 const arrayIndicadoresPorPais = indicadoresPorPais(paises, WORLDBANK)
-let indicadores = `<option>Seleccionar un país</option>`
+let indicadores = `<option>Seleccionar un indicador</option>`
 selectElementPais.addEventListener('change', (event) => {
   const arrayindicadores = WORLDBANK[event.target.value].indicators
   for (let i = 0; i < arrayindicadores.length; i++) {
@@ -22,6 +22,7 @@ selectElementPais.addEventListener('change', (event) => {
   }
   selectElementIndicador.innerHTML = indicadores
 })
+
 selectElementIndicador.addEventListener('change', (event) => {
   const arrayindicadorespais = WORLDBANK.PER.indicators[event.target.id]
 
