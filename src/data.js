@@ -5,6 +5,8 @@ const selectElementIndicador = document.getElementById('tipodeindicador');
 const selectElementPais = document.getElementById('listadepaises');
 const selectElementPaisIndicator = document.getElementById('resultado');
 const tabladedatod = document.getElementById('contenedortabla');
+const desdeaños = document.getElementById('desdeaños')
+const hastaaños = document.getElementById('hastaaños')
 
 // seleccionando indicadores por pais //
 const paises = Object.keys(WORLDBANK);
@@ -20,7 +22,6 @@ const indicadoresPorPais = (string) => {
 const arrayIndicadoresPorPais = indicadoresPorPais(paises);
 
 
-
 selectElementPais.addEventListener('change', (event) => {
   const paisSeleccionado = event.target.value;
   let indicadores = `<option>Seleccionar un indicador</option>`;
@@ -29,19 +30,22 @@ selectElementPais.addEventListener('change', (event) => {
     indicadores += `<option id=${i} value=${i}>${arrayindicadores[i].indicatorName}</option>`
   }
   selectElementIndicador.innerHTML = indicadores;
+
   selectElementIndicador.addEventListener('change', (event) => {
     const indicadorSeleccionado = event.target.value;
     console.log(event.target.value); //
     let template = `<tr>
     <th>año</th>
     <th>dato</th></tr> `;
-    
+
     const objetoDelIndicador = WORLDBANK[paisSeleccionado].indicators[indicadorSeleccionado].data;
     console.log(WORLDBANK[paisSeleccionado].indicators);
     console.log(WORLDBANK[paisSeleccionado].indicators[indicadorSeleccionado]);
     console.log(objetoDelIndicador);
     const arrayAños = Object.keys(objetoDelIndicador);
+    const arrayDatos = Object.values(objetoDelIndicador);
     console.log(arrayAños);
+    console.log(arrayDatos);
     for (let j = 0; j < arrayAños.length; j++) {
       console.log(arrayAños[j]);// propiedades años 
       console.log(objetoDelIndicador); // {} objeto 
@@ -56,43 +60,29 @@ selectElementPais.addEventListener('change', (event) => {
         tabladedatod.innerHTML = template;
       }
     }
+    const filtroaños = () => {
+      let añouno = `<option>Desde</option>`
+      for (let h = 0; h < arrayAños.length; h++) {
+        añouno += `<option value=${arrayAños[h]}>${arrayAños[h]}</option>`
+        desdeaños.innerHTML = añouno
+      }
+      let añodos = `<option>Hasta</option>`
+      for (let h = 0; h < arrayAños.length; h++) {
+        añodos += `<option value=${arrayAños[h]}>${arrayAños[h]}</option>`
+        hastaaños.innerHTML = añodos
+      }
+    }
+    desdeaños.addEventListener('change', (event) => {
+      const añoseleccionado = event.target.value
+      let primerosaños = arrayAños.filter(años => años > añoseleccionado)
+    }
+    )
   })
 })
-// seleccionando indicadores por codigo //
-/*
-const seleccionarIndicadorPorCodigo = (string, array) => {
 
-  //console.log(string)//
-
-  for (let i = 0; i < array.length; i++) {
-    return (array[i].indicatorName)
-  };
-  return selectorindicadores
-}
-*/
-/* const constenedor = document.getElementById('tables-peru')
-
-selectElementIndicador.addEventListener('change', (event) => {
-  const seleccionadordeindicador = (event.target.id)
-  console.log(seleccionadordeindicador)
-  let template = `
-  <tr>
-<th>año</th>
-<th>dato</th> 
-</tr>`
-  for (let i = 0; i < 57; i++) {
-    if (WORLDBANK[event.target.value][i].indicators === seleccionadordeindicador) {
-
-      template += `<tr id=${i}>
-  <td>${paises[i].indicators[i].data}</td>
-</tr>`
-    }
-  }
-}
-)
- */
 // creando variables globales //
 window.worldbank = {
+  arrayAños: arrayAños,
   indicadoresPorPais: indicadoresPorPais,
   arrayIndicadoresPorPais: arrayIndicadoresPorPais,
   paises: paises,

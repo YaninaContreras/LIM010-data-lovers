@@ -14,20 +14,4 @@ ingresa.addEventListener('click', () => {
   }
 });
 
-/*SEGUNDA PANTALLA*/
 
-/*const selectElement = document.getElementById('tipodeindicador');
-
-selectElement.addEventListener('change', (event) => {
-  const resultado = event.target.value;
-  for(let i=0; i<WORLDBANK.length; i++ ){
-    if(WORLDBANK[i].PER ===resultado){
-      console.log(WORLDBANK[i]);
-    }
-  }
-});*/
-
-
-
-
- 
