@@ -7,7 +7,7 @@ const selectElementPaisIndicator = document.getElementById('resultado');
 const tabladedatod = document.getElementById('contenedortabla');
 const desdeaños = document.getElementById('desdeaños')
 const hastaaños = document.getElementById('hastaaños')
-
+const selecaños = document.getElementsByClassName('añoselec')
 // seleccionando indicadores por pais //
 const paises = Object.keys(WORLDBANK);
 
@@ -60,23 +60,24 @@ selectElementPais.addEventListener('change', (event) => {
         tabladedatod.innerHTML = template;
       }
     }
-    const filtroaños = () => {
+    const filtroaños = (arrayAños) => {
       let añouno = `<option>Desde</option>`
+      let añodos = `<option>Hasta</option>`
       for (let h = 0; h < arrayAños.length; h++) {
         añouno += `<option value=${arrayAños[h]}>${arrayAños[h]}</option>`
         desdeaños.innerHTML = añouno
-      }
-      let añodos = `<option>Hasta</option>`
-      for (let h = 0; h < arrayAños.length; h++) {
         añodos += `<option value=${arrayAños[h]}>${arrayAños[h]}</option>`
         hastaaños.innerHTML = añodos
       }
+      filtroaños(arrayAños)
+      selecaños.addEventListener('change', (event) => {
+        const select = event.target.value
+        const hide = arrayAños.filter(añouno[select] <= arrayAños && añodos[select] >= arrayAños)
+        for (let i = 0; i < hide.length; i++) {
+          hide[i].style.display = 'none'
+        }
+      })
     }
-    desdeaños.addEventListener('change', (event) => {
-      const añoseleccionado = event.target.value
-      let primerosaños = arrayAños.filter(años => años > añoseleccionado)
-    }
-    )
   })
 })
 
