@@ -43,8 +43,13 @@
         <div class="selectElementPaisIndicator" id='selectElementPaisIndicator'></div>
         <table id="tabladedatos" class="tabladedatos">
         </table>
-      <select  id='ordenaranios'></select>
-      <select id="desdeaños"></select>
+      <select  id='selectOrderYears'>
+        <option value="ascendente">Ascendente</option> 
+        <option value="descendente">Descendente</option> 
+        <input type="number" min="1960" max="2017" id="inputdesde">
+        <input type="number" min="1960" max="2017" id="inputhasta">
+        <button type="submit" id="rango"></button>
+      </select>
     </section>
   </main>
   <footer></footer>
