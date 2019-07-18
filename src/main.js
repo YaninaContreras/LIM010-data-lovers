@@ -48,6 +48,7 @@ selectElementPais.addEventListener('change', (event) => {
   pintaOpcionesEnElementoSelect(arrIndicadores, selectElementIndicador, 'indicador');
 });
 
+
 /*let indicadores = '<option>Seleccionar un indicador</option>';
 const arrayindicadores = WORLDBANK[paisSeleccionado].indicators;
 for (let i = 0; i < arrayindicadores.length; i++) { // recorriendo array de objetos 
