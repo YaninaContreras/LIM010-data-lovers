@@ -81,11 +81,21 @@ selectElementPais.addEventListener('change', (event) => {
     const objectData = worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado);
     console.log(worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado));
     obtenrdata(objectData);
-  selectOrderYears.addEventListener('change',(event)=>{
-    const ordenSeleccionar = event.target
+    selectOrderYears.addEventListener('change', (event)=>{
+      const ordenSeleccionar = event.target.valores;
+    });
+    const filtroaños=( desde,hasta,datatotal) =>{
+      let rangofiltrado=[]
+      const key = Object.keys(datatotal);
+      const value =Object.values(datatotal)
+      if(datatotal[i].porcentaje>=inputdesde.value && datajunta<=inputhasta.value){
 
+      }
+    }
+  rango.addEventListener('click', (event) => {
+    const event.target.
 
-  })
+  })  
   });
 });
 
