@@ -29,12 +29,12 @@ const pintaOpcionesEnElementoSelect = (arr, elemento, msg) => {
   let string = `<option>Seleccionar un ${msg}</option>`;
   for (let i = 0; i < arr.length; i++) {
     if (typeof arr[i] === 'object') {
-      string += `<option value=${arr[i].indicatorName}>${arr[i].indicatorName}</option>`
-    } else { 
+      string += `<option id=${i} value=${i}>${arr[i].indicatorName}</option>`
+    } else {
       string += `<option value=${arr[i]}>${arr[i]}</option>`
     }
   }
-  elemento.innerHTML = string; 
+  elemento.innerHTML = string;
 };
 
 // Pintamos los paises de manera dinámica con la data
@@ -44,55 +44,48 @@ pintaOpcionesEnElementoSelect(arrPaises, selectElementPais, 'pais');
 selectElementPais.addEventListener('change', (event) => {
   const paisSeleccionado = event.target.value;
   const arrIndicadores = worldbank.obtenerIndicadoresPorPais(WORLDBANK, paisSeleccionado);
-  console.log(arrIndicadores);
   pintaOpcionesEnElementoSelect(arrIndicadores, selectElementIndicador, 'indicador');
+
+  const obtenrdata = (datadatos) => {
+    let template = '';
+    let anios = Object.keys(datadatos);
+    let valores = Object.values(datadatos);
+    let datajunta = [];
+    for (let i = 0; i < anios.length; i++) {
+      if (valores[i] === '') {
+        datajunta.push({
+          anio: anios[i],
+          porcentaje: 0,
+        });
+      } else {
+        datajunta.push({
+          anio: anios[i],
+          porcentaje: valores[i],
+        });
+      };
+    };
+    console.log(datajunta);
+    for (let j = 0; j < datajunta.length; j++) {
+      template += `
+        <tr>
+      <td>${datajunta[j].anio}</td>
+      <td>${datajunta[j].porcentaje}</td>
+      </tr>`;
+    };
+    tabladedatos.innerHTML = template;
+  };
+
+  selectElementIndicador.addEventListener('change', (event) => {
+    const indicadorSeleccionado = event.target.value;
+    console.log(indicadorSeleccionado);
+    const objectData = worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado);
+    console.log(worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado));
+    obtenrdata(objectData);
+  selectOrderYears.addEventListener('change',(event)=>{
+    const ordenSeleccionar = event.target
+
+
+  })
+  });
 });
 
-/*let indicadores = '<option>Seleccionar un indicador</option>';
-const arrayindicadores = WORLDBANK[paisSeleccionado].indicators;
-for (let i = 0; i < arrayindicadores.length; i++) { // recorriendo array de objetos 
-  indicadores += `<option id=${i} value=${i}>${arrayindicadores[i].indicatorName}</option>`;
-}
-selectElementIndicador.innerHTML = indicadores;
-*/
-//   //Funcionabilidad a los indicadores, pintamos la tabla//
-
-//   selectElementIndicador.addEventListener('change', (event) => {
-//     const indicadorSeleccionado = event.target.value;
-//     console.log(event.target.value);
-//     const objetoDelIndicador = WORLDBANK[paisSeleccionado].indicators[indicadorSeleccionado].data;
-//     //Convirtiendo objeto año a array para recorrerlo
-//     const arrayAños = Object.keys(objetoDelIndicador);
-//     const tablainner = (arrayAños, objetoDelIndicador) => {
-//       let tabla = `<tr>
-//     <th>AÑO</th>
-//     <th>DATO</th></tr> `;
-//       for (let j = 0; j < arrayAños.length; j++) {
-//         if (objetoDelIndicador[arrayAños[j]] !== '') {
-//           tabla += `
-//         <tr>
-//     <td>${arrayAños[j]}</td>
-//     <td>${objetoDelIndicador[arrayAños[j]].toFixed(2)}</td>
-//   </tr>`;
-//           tabladedatos.innerHTML = tabla;
-//         }
-//       }
-//     }
-//     tablainner(arrayAños, objetoDelIndicador)
-//     rango.addEventListener('click', () => {
-//       const añoselected = worldbank.filtroaños(inputdesde.value, inputhasta.value, arrayAños)
-//       tabladedatos.innerHTML = tablainner(añoselected, objetoDelIndicador)
-//     }
-//     )
-//     selectOrderYears.addEventListener('change', (event) => {
-//       let ordenSeleccionado = event.target.value;
-//       let resultadoOrdenar;
-//       if (ordenSeleccionado === 'ascencente') {
-//         //resultadoOrdenar = WORLDBANK.orderYears();
-//       } else {
-//         resultadoOrdenar = worldbank.orderYears(objetoDelIndicador).reverse();
-//       }
-//       mostrarDatos.innerHTML = selectOrderYears(resultadoOrdenar);
-//     });
-//   })
-// })
