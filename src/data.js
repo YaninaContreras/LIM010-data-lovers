@@ -6,8 +6,7 @@ const formarArrayDePaises = (obj) => {
 const obtenerIndicadoresPorPais = (obj, string) => {
   const arrIndicadores = obj[string].indicators;
   return arrIndicadores;
-};
-// 
+};// 
 const obtenerObjetoData = (WORLDBANK, strings, indicador) => {
   const objetoData = WORLDBANK[strings].indicators[indicador].data;
   return objetoData;
