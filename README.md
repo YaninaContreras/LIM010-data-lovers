@@ -13,18 +13,7 @@
 
 ## Preámbulo
 
-Según un estudio de IBM, el 90% de la data que existe hoy ha sido creada durante 
-los últimos dos años. Cada día generamos 2.5 trillones de bytes de datos, una 
-cifra sin precedentes.
-
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas 
-grandes cantidades de datos se conviertan en **información** fácil de leer para 
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de 
-hacerlo es creando _interfaces_ y _visualizaciones_.
-
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte 
-izquierda se puede construir una interfaz amigable y entendible por el usuario 
-al lado derecho.
+Conformado por 189 países miembros; con personal de más de 170 países, y oficinas en más de 130 lugares, el Grupo Banco Mundial es una asociación mundial única: las cinco instituciones que lo integran trabajan para reducir la pobreza y generar prosperidad compartida en los países en desarrollo.
 
 ![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
 

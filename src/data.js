@@ -1,12 +1,4 @@
-//Ordenar data ascendente y descendente//
-
-const orderYears = (obj) => { // {}
-const arraydeindicadores = Object.entries(datadeobjetos);
-console.log(arraydeindicadores);
-return arraydeindicadores.sort((antes, despues) => {
-  return antes[1] - despues[1];
-})
-};
+//función para formar array de paises
 const formarArrayDePaises = (obj) => {
   const arrPaises = Object.keys(obj);
   return arrPaises;
@@ -17,15 +9,35 @@ const obtenerIndicadoresPorPais = (obj, string) => {
   return arrIndicadores;
 };
 
-//Ordenar data ascendente y descendente//
+const obtenerDataPorIndicador = (obj, string, indicator) => {
+  console.log(obj,string,indicator);
+  const arrayData = obj[string].indicators[indicator];
+  return arrayData;
+}
+/*
+const datadatos = (obj,pais,indicador) =>{
+const dataDelIndicador = obj[pais].indicators[[indicador][0].data];
+return dataDelIndicador;
+}
+const obtenerDataPorIndicador = (dataDelIndicador) =>{
+  let years = [];
+  let valores = [];
+ lett datadatos=datadelindicador.data
+for (let propiedad in datadatos) {
+  years.push(propiedad);
+  if(datadatos[propiedad] === ''){
+     valores.push(0)
+  } else {
+     valores.push(datadatos[propiedad]) 
+  }; 
 
-const orderYears = (datadeobjetos) => { // {}
-  const arraydeindicadores = Object.entries(datadeobjetos);
-  console.log(arraydeindicadores);
-  return arraydeindicadores.sort((antes, despues) => {
-    return antes[1] - despues[1];
-  })
+
 };
+};*/
+/*
+console.log(arrAnios1.reverse());
+console.log(valores1.reverse());
+
 const filtroaños = (inputdesde, inputhasta, años) => {
   const key = Object.keys(años)
   const value = Object.values(años)
@@ -36,12 +48,13 @@ const filtroaños = (inputdesde, inputhasta, años) => {
     }
   }
   return rangoanios
-}
+};
+*/
 //Asignando variables globales//
 
 window.worldbank = {
   formarArrayDePaises: formarArrayDePaises,
   obtenerIndicadoresPorPais: obtenerIndicadoresPorPais,
-  filtroaños: filtroaños,
-  orderYears: orderYears
-}
+  obtenerDataPorIndicador: obtenerDataPorIndicador
+  //obtenerDataPorIndicador: obtenerDataPorIndicador
+  }

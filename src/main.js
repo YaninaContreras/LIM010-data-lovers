@@ -24,10 +24,12 @@ ingresa.addEventListener('click', () => {
 
 // Voy a utilizar las propiedad del objeto worldbank para utilizarlo como array de paises
 const arrPaises = worldbank.formarArrayDePaises(WORLDBANK);
+console.log(arrPaises);
 
 const pintaOpcionesEnElementoSelect = (arr, elemento, msg) => {
   let string = `<option>Seleccionar un ${msg}</option>`;
   for (let i = 0; i < arr.length; i++) {
+
     if (typeof arr[i] === 'object') {
       string += `<option value=${arr[i].indicatorName}>${arr[i].indicatorName}</option>`
     } else { 
@@ -39,28 +41,35 @@ const pintaOpcionesEnElementoSelect = (arr, elemento, msg) => {
 
 // Pintamos los paises de manera dinámica con la data
 pintaOpcionesEnElementoSelect(arrPaises, selectElementPais, 'pais');
-
+let arrIndicadores = [];
 // Evento para seleccionar un pais desde la pantalla
+
 selectElementPais.addEventListener('change', (event) => {
   const paisSeleccionado = event.target.value;
-  const arrIndicadores = worldbank.obtenerIndicadoresPorPais(WORLDBANK, paisSeleccionado);
+  arrIndicadores = worldbank.obtenerIndicadoresPorPais(WORLDBANK, paisSeleccionado);
   console.log(arrIndicadores);
   pintaOpcionesEnElementoSelect(arrIndicadores, selectElementIndicador, 'indicador');
+  
+  
+  
 });
 
-/*let indicadores = '<option>Seleccionar un indicador</option>';
-const arrayindicadores = WORLDBANK[paisSeleccionado].indicators;
-for (let i = 0; i < arrayindicadores.length; i++) { // recorriendo array de objetos 
-  indicadores += `<option id=${i} value=${i}>${arrayindicadores[i].indicatorName}</option>`;
-}
-selectElementIndicador.innerHTML = indicadores;
-*/
-//   //Funcionabilidad a los indicadores, pintamos la tabla//
+let arrData = [];
+selectElementIndicador.addEventListener('change', (event) => {
+  const paisSeleccionado = document.getElementById('selectElementPais').value;
+  const indicadorSeleccionado = event.target.value;
+  arrData = worldbank.obtenerDataPorIndicador(WORLDBANK, paisSeleccionado, indicadorSeleccionado);
+  console.log(arrData);
+});
 
-//   selectElementIndicador.addEventListener('change', (event) => {
-//     const indicadorSeleccionado = event.target.value;
-//     console.log(event.target.value);
-//     const objetoDelIndicador = WORLDBANK[paisSeleccionado].indicators[indicadorSeleccionado].data;
+
+//   //Funcionabilidad a los indicadores, pintamos la tabla//
+/*
+selectElementIndicador.addEventListener('change', (event) => {
+const indicadorSeleccionado = event.target.value;
+const objetoDelIndicador = worldbank.obtenerDataPorIndicador(arrIndicadores,indicado);
+console.log(objetoDelIndicador);
+});*/
 //     //Convirtiendo objeto año a array para recorrerlo
 //     const arrayAños = Object.keys(objetoDelIndicador);
 //     const tablainner = (arrayAños, objetoDelIndicador) => {
@@ -95,4 +104,4 @@ selectElementIndicador.innerHTML = indicadores;
 //       mostrarDatos.innerHTML = selectOrderYears(resultadoOrdenar);
 //     });
 //   })
-// })
+//})
