@@ -12,6 +12,8 @@ const obtenerObjetoData = (WORLDBANK, strings, indicador) => {
   return objetoData;
 };
 
+
+
 window.worldbank = {
   obtenerObjetoData: obtenerObjetoData,
   formarArrayDePaises: formarArrayDePaises,

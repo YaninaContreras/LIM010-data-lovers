@@ -51,7 +51,7 @@ selectElementPais.addEventListener('change', (event) => {
   const arrIndicadores = worldbank.obtenerIndicadoresPorPais(WORLDBANK, paisSeleccionado);
   pintaOpcionesEnElementoSelect(arrIndicadores, selectElementIndicador, 'indicador');
 
-  const obtenrdata = (datadatos) => {
+  const obtenerdata = (datadatos) => {
     let template = '';
     let anios = Object.keys(datadatos);
     let valores = Object.values(datadatos);
@@ -82,15 +82,33 @@ selectElementPais.addEventListener('change', (event) => {
 
   selectElementIndicador.addEventListener('change', (event) => {
     const indicadorSeleccionado = event.target.value;
-    console.log(indicadorSeleccionado);
+    
     const objectData = worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado);
     console.log(worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado));
-    obtenrdata(objectData);
+    obtenerdata(objectData);
+
 
   //Ascendente - Descendente
-  selectOrderYears.addEventListener('change',(event)=>{
-    const ordenSeleccionar = event.target
-  })
+  selectOrderYears.addEventListener('change',()=>{
+    obtenerdata.innerHTML = anios(ordenarData(WORLDBANK,selectOrderYears.value))
+  });
+
+  //filtro de años
+
+    const filtroaños=( desde,hasta,datatotal) =>{
+      let rangofiltrado=[]
+      const key = Object.keys(datatotal);
+      const value =Object.values(datatotal)
+      if(datatotal[i].porcentaje>=inputdesde.value && datajunta<=inputhasta.value){
+
+      }
+    }
+  rango.addEventListener('click', (event) => {
+    //const event.target.
+
+
+  })  
+
   });
 });
 
