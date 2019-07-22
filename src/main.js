@@ -81,21 +81,33 @@ selectElementPais.addEventListener('change', (event) => {
     const objectData = worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado);
     console.log(worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado));
     obtenrdata(objectData);
-    selectOrderYears.addEventListener('change', (event)=>{
-      const ordenSeleccionar = event.target.valores;
+
+    rango.addEventListener('click', () => {
+      const filtroaños = (desde, hasta, datatotal) => {
+        let template2 = '';
+        let rangofiltrado = [];
+        const key = Object.keys(datatotal);
+        const value = Object.values(datatotal);
+        for (let i = 0; i < key.length; i++) {
+          if (key[i] >= desde && key[i] <= hasta) {
+            rangofiltrado.push({
+              anio: key[i],
+              porcentaje: value[i],
+            });
+          };
+        };
+        console.log(rangofiltrado);
+        for (let j = 0; j < rangofiltrado.length; j++) {
+          template2 += `
+            <tr>
+          <td>${rangofiltrado[j].anio}</td>
+          <td>${rangofiltrado[j].porcentaje}</td>
+          </tr>`;
+        };
+        tabladedatos.innerHTML = template2;
+      };;
+      filtroaños(inputdesde.value, inputhasta.value, objectData);
     });
-    const filtroaños=( desde,hasta,datatotal) =>{
-      let rangofiltrado=[]
-      const key = Object.keys(datatotal);
-      const value =Object.values(datatotal)
-      if(datatotal[i].porcentaje>=inputdesde.value && datajunta<=inputhasta.value){
-
-      }
-    }
-  rango.addEventListener('click', (event) => {
-    const event.target.
-
-  })  
   });
 });
 
