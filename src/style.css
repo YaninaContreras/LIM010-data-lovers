@@ -1,108 +1,124 @@
-
-header{
-    margin-right: 60px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-left: 550px;
-}
-.bm{
-    width: 320px;
-    height: 180px;
-}
-body{
-
-    background-image: url("https://media.metrolatam.com/2019/01/10/ap19008764253286-a695c9c080d4623ffa111fefd08204f2-1200x600.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-origin: padding-box;
-    min-height: 100vh;
-    flex-direction: column;
-
-}
-main{
-    flex: 1;
+header {
+  margin-right: 60px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 550px;
 }
 
-.olvidaste{
-    
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 1px;
-    text-align: right;
-    color: #000000;
+.bm {
+  width: 320px;
+  height: 180px;
 }
 
-.cyc{
+body {
 
-font-weight: normal;
-font-size: 16px;
-color: #000000;
+  background-image: url("https://media.metrolatam.com/2019/01/10/ap19008764253286-a695c9c080d4623ffa111fefd08204f2-1200x600.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-origin: padding-box;
+  min-height: 100vh;
+  flex-direction: column;
 
 }
 
-.login{
-
-display: flex;
-justify-content: center;
-align-items: center;
-position: absolute;
-box-shadow: 2px 2px 1px rgba(247, 245, 245, 0.1);
-left: 34.03%;
-right: 34.03%;
-top: 29%;
-bottom: 24.8%;
-width: 460px;
-height: 516px;
-background: rgba(247, 247, 247, 0.6);
+main {
+  flex: 1;
 }
 
-.input{
+.olvidaste {
 
-background: rgb(255, 255, 255);
-border-radius: 2px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1px;
+  text-align: right;
+  color: #000000;
+}
+
+.cyc {
+
+  font-weight: normal;
+  font-size: 16px;
+  color: #000000;
 
 }
-.flags{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+
+.login {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  box-shadow: 2px 2px 1px rgba(247, 245, 245, 0.1);
+  left: 34.03%;
+  right: 34.03%;
+  top: 29%;
+  bottom: 24.8%;
+  width: 460px;
+  height: 516px;
+  background: rgba(247, 247, 247, 0.6);
+}
+
+.input {
+
+  background: rgb(255, 255, 255);
+  border-radius: 2px;
+
+}
+
+.flags {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.banderas {
+
+  background-repeat: no-repeat;
+  width: 90px;
+  height: 50px;
+  background-size: contain;
+}
+
+.ingresa {
+
+  background: #3897F0;
+  border-radius: 5px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+
+}
+
+.tabladedatos {
     align-items: center;
-}
-.banderas{
-
-    background-repeat: no-repeat;
-    width: 90px;
-    height: 50px;
-    background-size: contain;
-}
-.ingresa{
-
-background: #3897F0;
-border-radius: 5px;
-font-family: Open Sans;
-font-style: normal;
-font-weight: 800;
-font-size: 15px;
-align-items: center;
-text-align: center;
-color: #FFFFFF;
-padding-left: 50px;
-padding-right: 50px;
-padding-top: 9px;
-padding-bottom: 9px;
-
+    padding-left: 481px;
+    padding-right: 435px;
+    padding-top: 54px;
+    padding-bottom: 39px;
 }
 
-.primerapantalla{
-    display:block;
+.primerapantalla {
+  display: block;
 }
-.segundapantalla{
-    display: none;
-}
-.segundapantalla.show{
-    display:block;}
 
-.login.hide{
-    display:none; 
+.segundapantalla {
+  display: none;
+}
+
+.segundapantalla.show {
+  display: block;
+}
+
+.login.hide {
+  display: none;
 }
