@@ -23,6 +23,7 @@ ingresa.addEventListener('click', () => {
 });
 
 // Voy a utilizar las propiedad del objeto worldbank para utilizarlo como array de paises
+
 const arrPaises = worldbank.formarArrayDePaises(WORLDBANK);
 console.log(arrPaises);
 
@@ -40,50 +41,66 @@ const pintaOpcionesEnElementoSelect = (arr, elemento, msg) => {
   elemento.innerHTML = string;
 };
 
-// Pintamos los paises de manera dinámica con la data
+// Pintamos los paises de manera dinámica
 pintaOpcionesEnElementoSelect(arrPaises, selectElementPais, 'pais');
-let arrIndicadores = [];
+let arrayIndicadores = [];
 
 // Evento para seleccionar un pais desde la pantalla
 
 selectElementPais.addEventListener('change', (event) => {
   const paisSeleccionado = event.target.value;
   const arrIndicadores = worldbank.obtenerIndicadoresPorPais(WORLDBANK, paisSeleccionado);
+
+  // Pintamos los indicadores de manera dinámica
   pintaOpcionesEnElementoSelect(arrIndicadores, selectElementIndicador, 'indicador');
 
-  //CREANDO LA FUNCIÓN DE LA TABLA 
+  // CREANDO LA FUNCIÓN DE LA TABLA 
+
   const creandoTabla = (datajunta) => {
-    let template = '';
+    let template = `
+      < tr >
+      <th>Año</th>
+      <th>Porcentaje</th>
+  </tr > `;
     console.log(datajunta);
+
     for (let j = 0; j < datajunta.length; j++) {
       template += `
-        <tr>
-      <td>${datajunta[j].anio}</td>
-      <td>${datajunta[j].porcentaje}</td>
+        <tr class="tabla">
+      <td class="dato">${datajunta[j].anio}</td>
+      <td class="dato">${datajunta[j].porcentaje}</td>
       </tr>`;
     };
     tabladedatos.innerHTML = template;
   };
-  //EVENTO PARA MOSTRAR TABLA POR INDICADOR
   
+  // EVENTO PARA MOSTRAR TABLA POR INDICADOR
+
   selectElementIndicador.addEventListener('change', (event) => {
     const indicadorSeleccionado = event.target.value;
     const objectData = worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado);
     console.log(worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado));
     const arraydeObjetos = worldbank.obtenerdata(objectData);
+    console.log(arraydeObjetos)
     creandoTabla(arraydeObjetos);
+
+    // EVENTO PARA ORDENAR ASCENDENTE Y DESCENDENTE
+
     selectOrderYears.addEventListener('change', (event) => {
+      console.log(worldbank.ordenarData(objectData));
       const ordenSelected = event.target.value;
       console.log(ordenSelected);
       if (ordenSelected == 0) {
         const arrayOrdenado = arraydeObjetos.sort((unAnio, otroAnio) => unAnio.porcentaje - otroAnio.porcentaje);
         creandoTabla(arrayOrdenado);
-      };
-      if else(ordenSelected==1){
-        const arrayOrdenado = arraydeObjetos.sort((unAnio, otroAnio) => unAnio.porcentaje - otroAnio.porcentaje);
+      } else {
+        const arrayOrdenado = arraydeObjetos.sort((unAnio, otroAnio) => otroAnio.porcentaje - unAnio.porcentaje);
         creandoTabla(arrayOrdenado);
       }
     });
+
+    // EVENTO PARA FILTRAR POR RANGO DE AÑOS
+
     rango.addEventListener('click', () => {
       const arrayDeObjetosRango = worldbank.filtroaños(inputdesde.value, inputhasta.value, objectData);
       creandoTabla(arrayDeObjetosRango);
