@@ -64,6 +64,7 @@ selectElementPais.addEventListener('change', (event) => {
         });
       };
     };
+
     console.log(datajunta);
     for (let j = 0; j < datajunta.length; j++) {
       template += `
@@ -74,14 +75,15 @@ selectElementPais.addEventListener('change', (event) => {
     };
     tabladedatos.innerHTML = template;
   };
-
   selectElementIndicador.addEventListener('change', (event) => {
     const indicadorSeleccionado = event.target.value;
     console.log(indicadorSeleccionado);
     const objectData = worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado);
     console.log(worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado));
     obtenrdata(objectData);
-
+    selectOrderYears.addEventListener('change', (event) => {
+      const ordenseleccionado = event.target.value; 
+    });
     rango.addEventListener('click', () => {
       const filtroaños = (desde, hasta, datatotal) => {
         let template2 = '';
