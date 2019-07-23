@@ -1,19 +1,29 @@
-# Data Lovers
+BANCO MUNDIAL EN LATINOAMÉRICA
 
-## Índice
+El proyecto facilita y muestra la busqueda de datos de manera ágil y dinámica de facil acceso yy entendimiento para el usuario.
 
-- [Índice](#índice)
-- [Preámbulo](#preámbulo)
-- [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-- [Consideraciones generales](#consideraciones-generales)
-- [Requerimientos del proyecto](#requerimientos-del-proyecto)
-- [Contenido de referencia](#contenido-de-referencia)
+El usuario podrá iniciar sesión con el siguiente registro:
+Usuario: LABORATORIA 
+Contraseña: LABORATORIA
 
-***
+IMAGEN FINAL DEL PROYECTO
 
-## Preámbulo
+INVESTIGACION UX
 
-Conformado por 189 países miembros; con personal de más de 170 países, y oficinas en más de 130 lugares, el Grupo Banco Mundial es una asociación mundial única: las cinco instituciones que lo integran trabajan para reducir la pobreza y generar prosperidad compartida en los países en desarrollo.
+Se ha relizado encuestas para enfocarnos en las necesidades especificas de cada usuario recopilando la siguiente información:
+
+-Conseguir data para investigaciones  academicas (estudiantes).
+-Conseguir data para la ejecución y planeamiento de proyectos de enfoque social (Gestores de proyectos)
+-Conseguir data para decisiones políticas.
+-Conseguir data verídica para la inversión de capital en los países designados (empresarios).
+
+Este proyecto facilita la busqueda fácil y dinámica de la data del banco mundial ordenada y clasificada en cuatro paises latinoaméricanos Brasil, Perú, Chile, México.
+
+PROTOTIPO DE BAJA FIDELIDAD
+
+FEEDBACK 
+PROTOTIPO DE ALTA FIDELIDAD 
+
 
 ![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
 
@@ -142,7 +152,7 @@ de cada región.
 - Como usuaria quiero poder ordenar los datos de los indicadores de manera 
 ascendente (menor a mayor) o descendente (mayor a menor) para entender su 
 evolución por años y porcentaje.
-- Como usuaria quiero poder filtrar los datos de los indicadores por año o 
+- Como usuaria quiero poder filtrar los datos de los indicad3ores por año o 
 rango de años para entender su evolución en un tiempo definido.
 - Como usuario quiero poder ver el promedio de los porcentajes del indicador 
 seleccionado para tomar decisiones nuevas.
