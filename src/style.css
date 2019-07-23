@@ -49,7 +49,7 @@ main {
   justify-content: center;
   align-items: center;
   position: absolute;
-  box-shadow: 2px 2px 1px rgba(247, 245, 245, 0.1);
+  box-shadow: 2px 2px 1px rgba(133, 92, 92, 0.1);
   left: 34.03%;
   right: 34.03%;
   top: 29%;
@@ -100,13 +100,27 @@ main {
 }
 
 .tabladedatos {
-    align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  
+    /*
     padding-left: 481px;
     padding-right: 435px;
     padding-top: 54px;
-    padding-bottom: 39px;
+    padding-bottom: 39px;*/
+}
+.tabla{
+  background-color: #a28888;
 }
 
+.dato:hover{
+  background-color: #3897F0;
+}
+.dato{
+  border: solid 1px black;
+}
 .primerapantalla {
   display: block;
 }

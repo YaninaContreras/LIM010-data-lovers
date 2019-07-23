@@ -40,17 +40,20 @@ const pintaOpcionesEnElementoSelect = (arr, elemento, msg) => {
     elemento.innerHTML = string;
 };
 
-// Pintamos los paises de manera dinámica con la data
+// Pintamos los paises de manera dinámica
 pintaOpcionesEnElementoSelect(arrPaises, selectElementPais, 'pais');
-let arrIndicadores = [];
+let arrayIndicadores = [];
 
 // Evento para seleccionar un pais desde la pantalla
 
 selectElementPais.addEventListener('change', (event) => {
   const paisSeleccionado = event.target.value;
   const arrIndicadores = worldbank.obtenerIndicadoresPorPais(WORLDBANK, paisSeleccionado);
+
+// Pintamos los indicadores de manera dinámica
   pintaOpcionesEnElementoSelect(arrIndicadores, selectElementIndicador, 'indicador');
 
+// Obtener data en la tabla
   const obtenerdata = (datadatos) => {
     let template = '';
     let anios = Object.keys(datadatos);
@@ -70,11 +73,12 @@ selectElementPais.addEventListener('change', (event) => {
       };
     };
     console.log(datajunta);
+
     for (let j = 0; j < datajunta.length; j++) {
       template += `
-        <tr>
-      <td>${datajunta[j].anio}</td>
-      <td>${datajunta[j].porcentaje}</td>
+        <tr class="tabla">
+      <td class="dato">${datajunta[j].anio}</td>
+      <td class="dato">${datajunta[j].porcentaje}</td>
       </tr>`;
     };
     tabladedatos.innerHTML = template;
@@ -85,7 +89,16 @@ selectElementPais.addEventListener('change', (event) => {
     
     const objectData = worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado);
     console.log(worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado));
-    obtenrdata(objectData);
+    obtenerdata(objectData);
+
+//Orden ascendente y descendente 
+  /*selectOrderYears.addEventListener('change', (event)=> {
+    const ordenadito = ();
+   
+  });*/
+
+
+// Filtrado por años 
 
     rango.addEventListener('click', () => {
       const filtroaños = (desde, hasta, datatotal) => {
