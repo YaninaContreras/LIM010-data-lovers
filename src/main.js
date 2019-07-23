@@ -75,7 +75,11 @@ selectElementPais.addEventListener('change', (event) => {
     selectOrderYears.addEventListener('change', (event) => {
       const ordenSelected = event.target.value;
       console.log(ordenSelected);
-      if (ordenSelected == 1) {
+      if (ordenSelected == 0) {
+        const arrayOrdenado = arraydeObjetos.sort((unAnio, otroAnio) => unAnio.porcentaje - otroAnio.porcentaje);
+        creandoTabla(arrayOrdenado);
+      };
+      if else(ordenSelected==1){
         const arrayOrdenado = arraydeObjetos.sort((unAnio, otroAnio) => unAnio.porcentaje - otroAnio.porcentaje);
         creandoTabla(arrayOrdenado);
       }
