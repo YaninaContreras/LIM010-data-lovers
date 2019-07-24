@@ -59,6 +59,21 @@ const ordenarData = (dataob) => {
     return antes[1] - despues[1];
   });
 };
+const funcionOrdenAnios = (ordenSelected, arraydeObjetos) => {
+  if (ordenSelected == 0) {
+    const arrayOrdenadoAsc = arraydeObjetos.sort((unAnio, otroAnio) => unAnio.porcentaje - otroAnio.porcentaje);
+    return arrayOrdenadoAsc;
+  } else {
+    const arrayOrdenadoDsc = arraydeObjetos.sort((unAnio, otroAnio) => otroAnio.porcentaje - unAnio.porcentaje);
+    return arrayOrdenadoDsc;
+  }
+};
+const funcionPromedio = (arraydeObjetos) => {
+  let sumaObjeto = arraydeObjetos.reduce((acumulador, siguienteValor) => {
+    return acumulador + siguienteValor.porcentaje;
+  }, 0);
+  return sumaObjeto / arraydeObjetos.length;
+};
 
 window.worldbank = {
   obtenerObjetoData: obtenerObjetoData,
@@ -66,5 +81,7 @@ window.worldbank = {
   obtenerIndicadoresPorPais: obtenerIndicadoresPorPais,
   obtenerdata: obtenerdata,
   filtroaños: filtroaños,
-  ordenarData: ordenarData
-};
+  ordenarData: ordenarData,
+  funcionOrdenAnios: funcionOrdenAnios,
+  funcionPromedio: funcionPromedio
+};  

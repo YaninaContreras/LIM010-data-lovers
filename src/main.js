@@ -75,7 +75,7 @@ selectElementPais.addEventListener('change', (event) => {
     };
     tabladedatos.innerHTML = template;
   };
-  
+
   // EVENTO PARA MOSTRAR TABLA POR INDICADOR
 
   selectElementIndicador.addEventListener('change', (event) => {
@@ -83,7 +83,7 @@ selectElementPais.addEventListener('change', (event) => {
     const objectData = worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado);
     console.log(worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado));
     const arraydeObjetos = worldbank.obtenerdata(objectData);
-    console.log(arraydeObjetos)
+    console.log(arraydeObjetos);
     creandoTabla(arraydeObjetos);
 
     // EVENTO PARA ORDENAR ASCENDENTE Y DESCENDENTE
@@ -92,13 +92,8 @@ selectElementPais.addEventListener('change', (event) => {
       console.log(worldbank.ordenarData(objectData));
       const ordenSelected = event.target.value;
       console.log(ordenSelected);
-      if (ordenSelected == 0) {
-        const arrayOrdenado = arraydeObjetos.sort((unAnio, otroAnio) => unAnio.porcentaje - otroAnio.porcentaje);
-        creandoTabla(arrayOrdenado);
-      } else {
-        const arrayOrdenado = arraydeObjetos.sort((unAnio, otroAnio) => otroAnio.porcentaje - unAnio.porcentaje);
-        creandoTabla(arrayOrdenado);
-      }
+      const condicionalOrden = worldbank.funcionOrdenAnios(ordenSelected, arraydeObjetos);
+      creandoTabla(condicionalOrden);
     });
 
     // EVENTO PARA FILTRAR POR RANGO DE AÑOS
@@ -106,12 +101,9 @@ selectElementPais.addEventListener('change', (event) => {
       const arrayDeObjetosRango = worldbank.filtroaños(inputdesde.value, inputhasta.value, objectData);
       creandoTabla(arrayDeObjetosRango);
     });
-    promedio.addEventListener('click',()=>{
-      const sumaObjeto = arraydeObjetos.reduce((acumulador,siguienteValor)=>acumulador.porcentaje + siguienteValor.porcentaje);
-      const promedio = sumaObjeto / arraydeObjetos.length;
-      contenedorPromedio.innerHTML = promedio;
-      
-    })
+    promedio.addEventListener('click', () => {
+      contenedorPromedio.innerHTML = worldbank.funcionPromedio(arraydeObjetos);
+    });
   });
 });
 
