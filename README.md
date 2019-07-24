@@ -1,6 +1,6 @@
 BANCO MUNDIAL EN LATINOAMÉRICA
 
-El proyecto facilita y muestra la busqueda de datos de manera ágil y dinámica de facil acceso yy entendimiento para el usuario.
+El proyecto facilita y muestra la busqueda de datos de manera ágil y dinámica de facil acceso y entendimiento para el usuario.
 
 El usuario podrá iniciar sesión con el siguiente registro:
 Usuario: LABORATORIA 

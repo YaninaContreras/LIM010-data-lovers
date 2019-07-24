@@ -12,6 +12,8 @@ const selectOrderYears = document.getElementById('selectOrderYears');
 const inputdesde = document.getElementById('inputdesde');
 const inputhasta = document.getElementById('inputhasta');
 const rango = document.getElementById('rango');
+const promedio = document.getElementById('promedio');
+const contenedorPromedio = document.getElementById('contenedor-promedio');
 
 ingresa.addEventListener('click', () => {
   if (inputcorreo.value === 'LABORATORIA' && inputcontraseña.value === 'LABORATORIA') {
@@ -100,11 +102,16 @@ selectElementPais.addEventListener('change', (event) => {
     });
 
     // EVENTO PARA FILTRAR POR RANGO DE AÑOS
-
     rango.addEventListener('click', () => {
       const arrayDeObjetosRango = worldbank.filtroaños(inputdesde.value, inputhasta.value, objectData);
       creandoTabla(arrayDeObjetosRango);
     });
+    promedio.addEventListener('click',()=>{
+      const sumaObjeto = arraydeObjetos.reduce((acumulador,siguienteValor)=>acumulador.porcentaje + siguienteValor.porcentaje);
+      const promedio = sumaObjeto / arraydeObjetos.length;
+      contenedorPromedio.innerHTML = promedio;
+      
+    })
   });
 });
 
