@@ -12,6 +12,8 @@ const selectOrderYears = document.getElementById('selectOrderYears');
 const inputdesde = document.getElementById('inputdesde');
 const inputhasta = document.getElementById('inputhasta');
 const rango = document.getElementById('rango');
+const promedio = document.getElementById('promedio');
+const contenedorPromedio = document.getElementById('contenedor-promedio');
 
 ingresa.addEventListener('click', () => {
   if (inputcorreo.value === 'LABORATORIA' && inputcontraseña.value === 'LABORATORIA') {
@@ -23,6 +25,7 @@ ingresa.addEventListener('click', () => {
 });
 
 // Voy a utilizar las propiedad del objeto worldbank para utilizarlo como array de paises
+
 const arrPaises = worldbank.formarArrayDePaises(WORLDBANK);
 console.log(arrPaises);
 
@@ -37,7 +40,7 @@ const pintaOpcionesEnElementoSelect = (arr, elemento, msg) => {
     }
 
   }
-    elemento.innerHTML = string;
+  elemento.innerHTML = string;
 };
 
 // Pintamos los paises de manera dinámica
@@ -50,28 +53,17 @@ selectElementPais.addEventListener('change', (event) => {
   const paisSeleccionado = event.target.value;
   const arrIndicadores = worldbank.obtenerIndicadoresPorPais(WORLDBANK, paisSeleccionado);
 
-// Pintamos los indicadores de manera dinámica
+  // Pintamos los indicadores de manera dinámica
   pintaOpcionesEnElementoSelect(arrIndicadores, selectElementIndicador, 'indicador');
 
-// Obtener data en la tabla
-  const obtenerdata = (datadatos) => {
-    let template = '';
-    let anios = Object.keys(datadatos);
-    let valores = Object.values(datadatos);
-    let datajunta = [];
-    for (let i = 0; i < anios.length; i++) {
-      if (valores[i] === '') {
-        datajunta.push({
-          anio: anios[i],
-          porcentaje: 0,
-        });
-      } else {
-        datajunta.push({
-          anio: anios[i],
-          porcentaje: valores[i],
-        });
-      };
-    };
+  // CREANDO LA FUNCIÓN DE LA TABLA 
+
+  const creandoTabla = (datajunta) => {
+    let template = `
+      < tr >
+      <th>Año</th>
+      <th>Porcentaje</th>
+  </tr > `;
     console.log(datajunta);
 
     for (let j = 0; j < datajunta.length; j++) {
@@ -84,47 +76,33 @@ selectElementPais.addEventListener('change', (event) => {
     tabladedatos.innerHTML = template;
   };
 
+  // EVENTO PARA MOSTRAR TABLA POR INDICADOR
+
   selectElementIndicador.addEventListener('change', (event) => {
     const indicadorSeleccionado = event.target.value;
-    
     const objectData = worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado);
     console.log(worldbank.obtenerObjetoData(WORLDBANK, paisSeleccionado, indicadorSeleccionado));
-    obtenerdata(objectData);
+    const arraydeObjetos = worldbank.obtenerdata(objectData);
+    console.log(arraydeObjetos);
+    creandoTabla(arraydeObjetos);
 
-//Orden ascendente y descendente 
-  /*selectOrderYears.addEventListener('change', (event)=> {
-    const ordenadito = ();
-   
-  });*/
+    // EVENTO PARA ORDENAR ASCENDENTE Y DESCENDENTE
 
+    selectOrderYears.addEventListener('change', (event) => {
+      console.log(worldbank.ordenarData(objectData));
+      const ordenSelected = event.target.value;
+      console.log(ordenSelected);
+      const condicionalOrden = worldbank.funcionOrdenAnios(ordenSelected, arraydeObjetos);
+      creandoTabla(condicionalOrden);
+    });
 
-// Filtrado por años 
-
+    // EVENTO PARA FILTRAR POR RANGO DE AÑOS
     rango.addEventListener('click', () => {
-      const filtroaños = (desde, hasta, datatotal) => {
-        let template2 = '';
-        let rangofiltrado = [];
-        const key = Object.keys(datatotal);
-        const value = Object.values(datatotal);
-        for (let i = 0; i < key.length; i++) {
-          if (key[i] >= desde && key[i] <= hasta) {
-            rangofiltrado.push({
-              anio: key[i],
-              porcentaje: value[i],
-            });
-          };
-        };
-        console.log(rangofiltrado);
-        for (let j = 0; j < rangofiltrado.length; j++) {
-          template2 += `
-            <tr>
-          <td>${rangofiltrado[j].anio}</td>
-          <td>${rangofiltrado[j].porcentaje}</td>
-          </tr>`;
-        };
-        tabladedatos.innerHTML = template2;
-      };;
-      filtroaños(inputdesde.value, inputhasta.value, objectData);
+      const arrayDeObjetosRango = worldbank.filtroaños(inputdesde.value, inputhasta.value, objectData);
+      creandoTabla(arrayDeObjetosRango);
+    });
+    promedio.addEventListener('click', () => {
+      contenedorPromedio.innerHTML = worldbank.funcionPromedio(arraydeObjetos);
     });
   });
 });
