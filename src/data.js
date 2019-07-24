@@ -22,6 +22,8 @@ const ordenarData = (dataob) => {
   return indicadorConArray.sort((antes, despues) => {
     return antes[1] - despues[1];
   });
+    
+  
 };
 
 window.worldbank = {

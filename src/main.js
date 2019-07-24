@@ -77,8 +77,8 @@ selectElementPais.addEventListener('change', (event) => {
     for (let j = 0; j < datajunta.length; j++) {
       template += `
         <tr class="tabla">
-      <td class="dato">${datajunta[j].anio}</td>
-      <td class="dato">${datajunta[j].porcentaje}</td>
+      <td class="celda">${datajunta[j].anio}</td>
+      <td class="celda">${datajunta[j].porcentaje}</td>
       </tr>`;
     };
     tabladedatos.innerHTML = template;
