@@ -104,21 +104,20 @@ main {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  
-    /*
-    padding-left: 481px;
-    padding-right: 435px;
-    padding-top: 54px;
-    padding-bottom: 39px;*/
-}
-.tabla{
-  background-color: #a28888;
 }
 
-.dato:hover{
-  background-color: #3897F0;
+.tabla{
+  background-color: white;
+  text-align: center;
+  border: 1px solid;
 }
-.dato{
+.tabla tbody {
+    background-color: white;
+}
+.tabla td:hover{
+  background-color: rgb(219, 178, 64);
+}
+.celda{
   border: solid 1px black;
 }
 .primerapantalla {

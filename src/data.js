@@ -60,7 +60,7 @@ const ordenarData = (dataob) => {
   });
 };
 const funcionOrdenAnios = (ordenSelected, arraydeObjetos) => {
-  if (ordenSelected == 0) {
+  if (ordenSelected === 0) {
     const arrayOrdenadoAsc = arraydeObjetos.sort((unAnio, otroAnio) => unAnio.porcentaje - otroAnio.porcentaje);
     return arrayOrdenadoAsc;
   } else {
