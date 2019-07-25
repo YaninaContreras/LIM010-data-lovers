@@ -356,8 +356,7 @@ const output2 = [
     'indicatorCode': 'SL.TLF.PART.FE.ZS'
   },
 ];
-const output3 =
-{
+const output3 = {
   '1960': '',
   '1961': '',
   '1962': '',
@@ -651,412 +650,646 @@ const arrayDeObjetos = [
     porcentaje: 23.7600002288818
   }
 ];
-const output4 = [{
-  anio: '1960',
-  porcentaje: ''
-},
-{
-  anio: '1961',
-  porcentaje: ''
-},
-{
-  anio: '1962',
-  porcentaje: ''
-},
-{
-  anio: '1963',
-  porcentaje: ''
-},
-{
-  anio: '1964',
-  porcentaje: ''
-},
-{
-  anio: '1965',
-  porcentaje: ''
-},
-{
-  anio: '1966',
-  porcentaje: ''
-},
-{
-  anio: '1967',
-  porcentaje: ''
-},
-{
-  anio: '1968',
-  porcentaje: ''
-},
-{
-  anio: '1969',
-  porcentaje: ''
-},
-{
-  anio: '1970',
-  porcentaje: ''
-},
-{
-  anio: '1971',
-  porcentaje: ''
-},
-{
-  anio: '1972',
-  porcentaje: ''
-},
-{
-  anio: '1973',
-  porcentaje: ''
-},
-{
-  anio: '1974',
-  porcentaje: ''
-},
-{
-  anio: '1975',
-  porcentaje: ''
-},
-{
-  anio: '1976',
-  porcentaje: ''
-},
-{
-  anio: '1977',
-  porcentaje: ''
-},
-{
-  anio: '1978',
-  porcentaje: ''
-},
-{
-  anio: '1979',
-  porcentaje: ''
-},
-{
-  anio: '1980',
-  porcentaje: ''
-},
-{
-  anio: '1981',
-  porcentaje: ''
-},
-{
-  anio: '1982',
-  porcentaje: ''
-},
-{
-  anio: '1983',
-  porcentaje: ''
-},
-{
-  anio: '1984',
-  porcentaje: ''
-},
-{
-  anio: '1985',
-  porcentaje: ''
-},
-{
-  anio: '1986',
-  porcentaje: ''
-},
-{
-  anio: '1987',
-  porcentaje: ''
-},
-{
-  anio: '1988',
-  porcentaje: ''
-},
-{
-  anio: '1989',
-  porcentaje: ''
-},
-{
-  anio: '1990',
-  porcentaje: ''
-},
-{
-  anio: '1991',
-  porcentaje: ''
-},
-{
-  anio: '1992',
-  porcentaje: ''
-},
-{
-  anio: '1993',
-  porcentaje: ''
-},
-{
-  anio: '1994',
-  porcentaje: ''
-},
-{
-  anio: '1995',
-  porcentaje: ''
-},
-{
-  anio: '1996',
-  porcentaje: ''
-},
-{
-  anio: '1997',
-  porcentaje: ''
-},
-{
-  anio: '1998',
-  porcentaje: ''
-},
-{
-  anio: '1999',
-  porcentaje: ''
-},
-{
-  anio: '2000',
-  porcentaje: ''
-},
-{
-  anio: '2001',
-  porcentaje: ''
-},
-{
-  anio: '2002',
-  porcentaje: 31.4799995422363
-}];
+const output4 = [
+  {
+    anio: '1960',
+    porcentaje: ''
+  },
+  {
+    anio: '1961',
+    porcentaje: ''
+  },
+  {
+    anio: '1962',
+    porcentaje: ''
+  },
+  {
+    anio: '1963',
+    porcentaje: ''
+  },
+  {
+    anio: '1964',
+    porcentaje: ''
+  },
+  {
+    anio: '1965',
+    porcentaje: ''
+  },
+  {
+    anio: '1966',
+    porcentaje: ''
+  },
+  {
+    anio: '1967',
+    porcentaje: ''
+  },
+  {
+    anio: '1968',
+    porcentaje: ''
+  },
+  {
+    anio: '1969',
+    porcentaje: ''
+  },
+  {
+    anio: '1970',
+    porcentaje: ''
+  },
+  {
+    anio: '1971',
+    porcentaje: ''
+  },
+  {
+    anio: '1972',
+    porcentaje: ''
+  },
+  {
+    anio: '1973',
+    porcentaje: ''
+  },
+  {
+    anio: '1974',
+    porcentaje: ''
+  },
+  {
+    anio: '1975',
+    porcentaje: ''
+  },
+  {
+    anio: '1976',
+    porcentaje: ''
+  },
+  {
+    anio: '1977',
+    porcentaje: ''
+  },
+  {
+    anio: '1978',
+    porcentaje: ''
+  },
+  {
+    anio: '1979',
+    porcentaje: ''
+  },
+  {
+    anio: '1980',
+    porcentaje: ''
+  },
+  {
+    anio: '1981',
+    porcentaje: ''
+  },
+  {
+    anio: '1982',
+    porcentaje: ''
+  },
+  {
+    anio: '1983',
+    porcentaje: ''
+  },
+  {
+    anio: '1984',
+    porcentaje: ''
+  },
+  {
+    anio: '1985',
+    porcentaje: ''
+  },
+  {
+    anio: '1986',
+    porcentaje: ''
+  },
+  {
+    anio: '1987',
+    porcentaje: ''
+  },
+  {
+    anio: '1988',
+    porcentaje: ''
+  },
+  {
+    anio: '1989',
+    porcentaje: ''
+  },
+  {
+    anio: '1990',
+    porcentaje: ''
+  },
+  {
+    anio: '1991',
+    porcentaje: ''
+  },
+  {
+    anio: '1992',
+    porcentaje: ''
+  },
+  {
+    anio: '1993',
+    porcentaje: ''
+  },
+  {
+    anio: '1994',
+    porcentaje: ''
+  },
+  {
+    anio: '1995',
+    porcentaje: ''
+  },
+  {
+    anio: '1996',
+    porcentaje: ''
+  },
+  {
+    anio: '1997',
+    porcentaje: ''
+  },
+  {
+    anio: '1998',
+    porcentaje: ''
+  },
+  {
+    anio: '1999',
+    porcentaje: ''
+  },
+  {
+    anio: '2000',
+    porcentaje: ''
+  },
+  {
+    anio: '2001',
+    porcentaje: ''
+  },
+  {
+    anio: '2002',
+    porcentaje: 31.4799995422363
+  }];
 const output5 = [
-  {anio: '1960',
-    porcentaje: 0},
-  {anio: '1961',
-    porcentaje: 0},
-  {anio: '1962',
-    porcentaje: 0},
-  {anio: '1963',
-    porcentaje: 0},
-  {anio: '1964',
-    porcentaje: 0},
-  {anio: '1965',
-    porcentaje: 0},
-  {anio: '1966',
-    porcentaje: 0},
-  {anio: '1967',
-    porcentaje: 0},
-  {anio: '1968',
-    porcentaje: 0},
-  {anio: '1969',
-    porcentaje: 0},
-  {anio: '1970',
-    porcentaje: 0},
-  {anio: '1971',
-    porcentaje: 0},
-  {anio: '1972',
-    porcentaje: 0},
-  {anio: '1973',
-    porcentaje: 0},
-  {anio: '1974',
-    porcentaje: 0},
-  {anio: '1975',
-    porcentaje: 0},
-  {anio: '1976',
-    porcentaje: 0},
-  {anio: '1977',
-    porcentaje: 0},
-  {anio: '1978',
-    porcentaje: 0},
-  {anio: '1979',
-    porcentaje: 0},
-  {anio: '1980',
-    porcentaje: 0},
-  {anio: '1981',
-    porcentaje: 0},
-  {anio: '1982',
-    porcentaje: 0},
-  {anio: '1983',
-    porcentaje: 0},
-  {anio: '1984',
-    porcentaje: 0},
-  {anio: '1985',
-    porcentaje: 0},
-  {anio: '1986',
-    porcentaje: 0},
-  {anio: '1987',
-    porcentaje: 0},
-  {anio: '1988',
-    porcentaje: 0},
-  {anio: '1989',
-    porcentaje: 0},
-  {anio: '1990',
-    porcentaje: 0},
-  {anio: '1991',
-    porcentaje: 0},
-  {anio: '1992',
-    porcentaje: 0},
-  {anio: '1993',
-    porcentaje: 0},
-  {anio: '1994',
-    porcentaje: 0},
-  {anio: '1995',
-    porcentaje: 0},
-  {anio: '1996',
-    porcentaje: 0},
-  {anio: '1997',
-    porcentaje: 0},
-  {anio: '1998',
-    porcentaje: 0},
-  {anio: '1999',
-    porcentaje: 0},
-  {anio: '2000',
-    porcentaje: 0},
-  {anio: '2001',
-    porcentaje: 0},
-  {anio: '2015',
-    porcentaje: 21.6800003051758},
-  {anio: '2016',
-    porcentaje: 23.7399997711182},
-  {anio: '2017',
-    porcentaje: 23.7600002288818},
-  {anio: '2013',
-    porcentaje: 24.0900001525879},
-  {anio: '2014',
-    porcentaje: 24.2099990844727},
-  {anio: '2011',
-    porcentaje: 24.7999992370605},
-  {anio: '2012',
-    porcentaje: 25.0400009155273},
-  {anio: '2010',
-    porcentaje: 25.3400001525879},
-  {anio: '2008',
-    porcentaje: 26.9599990844727},
-  {anio: '2006',
-    porcentaje: 26.9699993133545},
-  {anio: '2005',
-    porcentaje: 27.2099990844727},
-  {anio: '2009',
-    porcentaje: 27.3600006103516},
-  {anio: '2004',
-    porcentaje: 27.6299991607666},
-  {anio: '2007',
-    porcentaje: 27.6700000762939},
-  {anio: '2003',
-    porcentaje: 29.6299991607666},
-  {anio: '2002',
-    porcentaje: 31.4799995422363},
+  {
+    anio: '1960',
+    porcentaje: 0
+  },
+  {
+    anio: '1961',
+    porcentaje: 0
+  },
+  {
+    anio: '1962',
+    porcentaje: 0
+  },
+  {
+    anio: '1963',
+    porcentaje: 0
+  },
+  {
+    anio: '1964',
+    porcentaje: 0
+  },
+  {
+    anio: '1965',
+    porcentaje: 0
+  },
+  {
+    anio: '1966',
+    porcentaje: 0
+  },
+  {
+    anio: '1967',
+    porcentaje: 0
+  },
+  {
+    anio: '1968',
+    porcentaje: 0
+  },
+  {
+    anio: '1969',
+    porcentaje: 0
+  },
+  {
+    anio: '1970',
+    porcentaje: 0
+  },
+  {
+    anio: '1971',
+    porcentaje: 0
+  },
+  {
+    anio: '1972',
+    porcentaje: 0
+  },
+  {
+    anio: '1973',
+    porcentaje: 0
+  },
+  {
+    anio: '1974',
+    porcentaje: 0
+  },
+  {
+    anio: '1975',
+    porcentaje: 0
+  },
+  {
+    anio: '1976',
+    porcentaje: 0
+  },
+  {
+    anio: '1977',
+    porcentaje: 0
+  },
+  {
+    anio: '1978',
+    porcentaje: 0
+  },
+  {
+    anio: '1979',
+    porcentaje: 0
+  },
+  {
+    anio: '1980',
+    porcentaje: 0
+  },
+  {
+    anio: '1981',
+    porcentaje: 0
+  },
+  {
+    anio: '1982',
+    porcentaje: 0
+  },
+  {
+    anio: '1983',
+    porcentaje: 0
+  },
+  {
+    anio: '1984',
+    porcentaje: 0
+  },
+  {
+    anio: '1985',
+    porcentaje: 0
+  },
+  {
+    anio: '1986',
+    porcentaje: 0
+  },
+  {
+    anio: '1987',
+    porcentaje: 0
+  },
+  {
+    anio: '1988',
+    porcentaje: 0
+  },
+  {
+    anio: '1989',
+    porcentaje: 0
+  },
+  {
+    anio: '1990',
+    porcentaje: 0
+  },
+  {
+    anio: '1991',
+    porcentaje: 0
+  },
+  {
+    anio: '1992',
+    porcentaje: 0
+  },
+  {
+    anio: '1993',
+    porcentaje: 0
+  },
+  {
+    anio: '1994',
+    porcentaje: 0
+  },
+  {
+    anio: '1995',
+    porcentaje: 0
+  },
+  {
+    anio: '1996',
+    porcentaje: 0
+  },
+  {
+    anio: '1997',
+    porcentaje: 0
+  },
+  {
+    anio: '1998',
+    porcentaje: 0
+  },
+  {
+    anio: '1999',
+    porcentaje: 0
+  },
+  {
+    anio: '2000',
+    porcentaje: 0
+  },
+  {
+    anio: '2001',
+    porcentaje: 0
+  },
+  {
+    anio: '2015',
+    porcentaje: 21.6800003051758
+  },
+  {
+    anio: '2016',
+    porcentaje: 23.7399997711182
+  },
+  {
+    anio: '2017',
+    porcentaje: 23.7600002288818
+  },
+  {
+    anio: '2013',
+    porcentaje: 24.0900001525879
+  },
+  {
+    anio: '2014',
+    porcentaje: 24.2099990844727
+  },
+  {
+    anio: '2011',
+    porcentaje: 24.7999992370605
+  },
+  {
+    anio: '2012',
+    porcentaje: 25.0400009155273
+  },
+  {
+    anio: '2010',
+    porcentaje: 25.3400001525879
+  },
+  {
+    anio: '2008',
+    porcentaje: 26.9599990844727
+  },
+  {
+    anio: '2006',
+    porcentaje: 26.9699993133545
+  },
+  {
+    anio: '2005',
+    porcentaje: 27.2099990844727
+  },
+  {
+    anio: '2009',
+    porcentaje: 27.3600006103516
+  },
+  {
+    anio: '2004',
+    porcentaje: 27.6299991607666
+  },
+  {
+    anio: '2007',
+    porcentaje: 27.6700000762939
+  },
+  {
+    anio: '2003',
+    porcentaje: 29.6299991607666
+  },
+  {
+    anio: '2002',
+    porcentaje: 31.4799995422363
+  },
 ];
-const output7 = [ {anio: '2002',
-  porcentaje: 31.4799995422363},
-{anio: '2003',
-  porcentaje: 29.6299991607666},
-{anio: '2007',
-  porcentaje: 27.6700000762939},
-{anio: '2004',
-  porcentaje: 27.6299991607666},
-{anio: '2009',
-  porcentaje: 27.3600006103516},
-{anio: '2005',
-  porcentaje: 27.2099990844727},
-{anio: '2006',
-  porcentaje: 26.9699993133545},
-{anio: '2008',
-  porcentaje: 26.9599990844727},
-{anio: '2010',
-  porcentaje: 25.3400001525879},
-{anio: '2012',
-  porcentaje: 25.0400009155273},
-{anio: '2011',
-  porcentaje: 24.7999992370605},
-{anio: '2014',
-  porcentaje: 24.2099990844727},
-{anio: '2013',
-  porcentaje: 24.0900001525879},
-{anio: '2017',
-  porcentaje: 23.7600002288818},
-{anio: '2016',
-  porcentaje: 23.7399997711182},
-{anio: '2015',
-  porcentaje: 21.6800003051758},
-{anio: '1960',
-  porcentaje: 0},
-{anio: '1961',
-  porcentaje: 0},
-{anio: '1962',
-  porcentaje: 0},
-{anio: '1963',
-  porcentaje: 0},
-{anio: '1964',
-  porcentaje: 0},
-{anio: '1965',
-  porcentaje: 0},
-{anio: '1966',
-  porcentaje: 0},
-{anio: '1967',
-  porcentaje: 0},
-{anio: '1968',
-  porcentaje: 0},
-{anio: '1969',
-  porcentaje: 0},
-{anio: '1970',
-  porcentaje: 0},
-{anio: '1971',
-  porcentaje: 0},
-{anio: '1972',
-  porcentaje: 0},
-{anio: '1973',
-  porcentaje: 0},
-{anio: '1974',
-  porcentaje: 0},
-{anio: '1975',
-  porcentaje: 0},
-{anio: '1976',
-  porcentaje: 0},
-{anio: '1977',
-  porcentaje: 0},
-{anio: '1978',
-  porcentaje: 0},
-{anio: '1979',
-  porcentaje: 0},
-{anio: '1980',
-  porcentaje: 0},
-{anio: '1981',
-  porcentaje: 0},
-{anio: '1982',
-  porcentaje: 0},
-{anio: '1983',
-  porcentaje: 0},
-{anio: '1984',
-  porcentaje: 0},
-{anio: '1985',
-  porcentaje: 0},
-{anio: '1986',
-  porcentaje: 0},
-{anio: '1987',
-  porcentaje: 0},
-{anio: '1988',
-  porcentaje: 0},
-{anio: '1989',
-  porcentaje: 0},
-{anio: '1990',
-  porcentaje: 0},
-{anio: '1991',
-  porcentaje: 0},
-{anio: '1992',
-  porcentaje: 0},
-{anio: '1993',
-  porcentaje: 0},
-{anio: '1994',
-  porcentaje: 0},
-{anio: '1995',
-  porcentaje: 0},
-{anio: '1996',
-  porcentaje: 0},
-{anio: '1997',
-  porcentaje: 0},
-{anio: '1998',
-  porcentaje: 0},
-{anio: '1999',
-  porcentaje: 0},
-{anio: '2000',
-  porcentaje: 0},
-{anio: '2001',
-  porcentaje: 0}
+const output7 = [
+  {
+    anio: '2002',
+    porcentaje: 31.4799995422363
+  },
+  {
+    anio: '2003',
+    porcentaje: 29.6299991607666
+  },
+  {
+    anio: '2007',
+    porcentaje: 27.6700000762939
+  },
+  {
+    anio: '2004',
+    porcentaje: 27.6299991607666
+  },
+  {
+    anio: '2009',
+    porcentaje: 27.3600006103516
+  },
+  {
+    anio: '2005',
+    porcentaje: 27.2099990844727
+  },
+  {
+    anio: '2006',
+    porcentaje: 26.9699993133545
+  },
+  {
+    anio: '2008',
+    porcentaje: 26.9599990844727
+  },
+  {
+    anio: '2010',
+    porcentaje: 25.3400001525879
+  },
+  {
+    anio: '2012',
+    porcentaje: 25.0400009155273
+  },
+  {
+    anio: '2011',
+    porcentaje: 24.7999992370605
+  },
+  {
+    anio: '2014',
+    porcentaje: 24.2099990844727
+  },
+  {
+    anio: '2013',
+    porcentaje: 24.0900001525879
+  },
+  {
+    anio: '2017',
+    porcentaje: 23.7600002288818
+  },
+  {
+    anio: '2016',
+    porcentaje: 23.7399997711182
+  },
+  {
+    anio: '2015',
+    porcentaje: 21.6800003051758
+  },
+  {
+    anio: '1960',
+    porcentaje: 0
+  },
+  {
+    anio: '1961',
+    porcentaje: 0
+  },
+  {
+    anio: '1962',
+    porcentaje: 0
+  },
+  {
+    anio: '1963',
+    porcentaje: 0
+  },
+  {
+    anio: '1964',
+    porcentaje: 0
+  },
+  {
+    anio: '1965',
+    porcentaje: 0
+  },
+  {
+    anio: '1966',
+    porcentaje: 0
+  },
+  {
+    anio: '1967',
+    porcentaje: 0
+  },
+  {
+    anio: '1968',
+    porcentaje: 0
+  },
+  {
+    anio: '1969',
+    porcentaje: 0
+  },
+  {
+    anio: '1970',
+    porcentaje: 0
+  },
+  {
+    anio: '1971',
+    porcentaje: 0
+  },
+  {
+    anio: '1972',
+    porcentaje: 0
+  },
+  {
+    anio: '1973',
+    porcentaje: 0
+  },
+  {
+    anio: '1974',
+    porcentaje: 0
+  },
+  {
+    anio: '1975',
+    porcentaje: 0
+  },
+  {
+    anio: '1976',
+    porcentaje: 0
+  },
+  {
+    anio: '1977',
+    porcentaje: 0
+  },
+  {
+    anio: '1978',
+    porcentaje: 0
+  },
+  {
+    anio: '1979',
+    porcentaje: 0
+  },
+  {
+    anio: '1980',
+    porcentaje: 0
+  },
+  {
+    anio: '1981',
+    porcentaje: 0
+  },
+  {
+    anio: '1982',
+    porcentaje: 0
+  },
+  {
+    anio: '1983',
+    porcentaje: 0
+  },
+  {
+    anio: '1984',
+    porcentaje: 0
+  },
+  {
+    anio: '1985',
+    porcentaje: 0
+  },
+  {
+    anio: '1986',
+    porcentaje: 0
+  },
+  {
+    anio: '1987',
+    porcentaje: 0
+  },
+  {
+    anio: '1988',
+    porcentaje: 0
+  },
+  {
+    anio: '1989',
+    porcentaje: 0
+  },
+  {
+    anio: '1990',
+    porcentaje: 0
+  },
+  {
+    anio: '1991',
+    porcentaje: 0
+  },
+  {
+    anio: '1992',
+    porcentaje: 0
+  },
+  {
+    anio: '1993',
+    porcentaje: 0
+  },
+  {
+    anio: '1994',
+    porcentaje: 0
+  },
+  {
+    anio: '1995',
+    porcentaje: 0
+  },
+  {
+    anio: '1996',
+    porcentaje: 0
+  },
+  {
+    anio: '1997',
+    porcentaje: 0
+  },
+  {
+    anio: '1998',
+    porcentaje: 0
+  },
+  {
+    anio: '1999',
+    porcentaje: 0
+  },
+  {
+    anio: '2000',
+    porcentaje: 0
+  },
+  {
+    anio: '2001',
+    porcentaje: 0
+  }
 ];
 const output6 = 7.199482687588396;
 describe('formarArrayDePaises', () => {
