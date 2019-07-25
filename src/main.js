@@ -38,7 +38,6 @@ const pintaOpcionesEnElementoSelect = (arr, elemento, msg) => {
     } else {
       string += `<option value=${arr[i]}>${arr[i]}</option>`
     }
-
   }
   elemento.innerHTML = string;
 };
@@ -52,7 +51,7 @@ let arrayIndicadores = [];
 selectElementPais.addEventListener('change', (event) => {
   const paisSeleccionado = event.target.value;
   const arrIndicadores = worldbank.obtenerIndicadoresPorPais(WORLDBANK, paisSeleccionado);
-
+  console.log(arrIndicadores);
   // Pintamos los indicadores de manera dinámica
   pintaOpcionesEnElementoSelect(arrIndicadores, selectElementIndicador, 'indicador');
 
