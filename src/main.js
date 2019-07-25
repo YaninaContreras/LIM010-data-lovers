@@ -1,14 +1,14 @@
 const inputcorreo = document.getElementById('inputcorreo');
-const inputcontraseña = document.getElementById('inputcontraseña');
+const inputcontraseña = document.getElementById('inputcontrasena');
 const ingresa = document.getElementById('ingresa');
 const error = document.getElementById('error');
 const segundapantalla = document.getElementById('segundapantalla');
 const login = document.getElementById('login');
-const selectElementIndicador = document.getElementById('selectElementIndicador');
-const selectElementPais = document.getElementById('selectElementPais');
-const selectElementPaisIndicator = document.getElementById('selectElementPaisIndicator');
+const selectElementIndicador = document.getElementById('select-element-indicador');
+const selectElementPais = document.getElementById('select-element-pais');
+const selectElementPaisIndicator = document.getElementById('select-element-pais-indicator');
 const tabladedatos = document.getElementById('tabladedatos');
-const selectOrderYears = document.getElementById('selectOrderYears');
+const selectOrderYears = document.getElementById('select-order-years');
 const inputdesde = document.getElementById('inputdesde');
 const inputhasta = document.getElementById('inputhasta');
 const rango = document.getElementById('rango');
@@ -32,13 +32,11 @@ console.log(arrPaises);
 const pintaOpcionesEnElementoSelect = (arr, elemento, msg) => {
   let string = `<option>Seleccionar un ${msg}</option>`;
   for (let i = 0; i < arr.length; i++) {
-
     if (typeof arr[i] === 'object') {
-      string += `<option id=${i} value=${i}>${arr[i].indicatorName}</option>`
+      string += `<option id=${i} value=${i}>${arr[i].indicatorName}</option>`;
     } else {
-      string += `<option value=${arr[i]}>${arr[i]}</option>`
+      string += `<option value=${arr[i]}>${arr[i]}</option>`;
     }
-
   }
   elemento.innerHTML = string;
 };
@@ -59,8 +57,7 @@ selectElementPais.addEventListener('change', (event) => {
   // CREANDO LA FUNCIÓN DE LA TABLA 
 
   const creandoTabla = (datajunta) => {
-    let template = `
-      < tr >
+    let template = `< tr >
       <th>Año</th>
       <th>Porcentaje</th>
   </tr > `;
@@ -68,9 +65,9 @@ selectElementPais.addEventListener('change', (event) => {
 
     for (let j = 0; j < datajunta.length; j++) {
       template += `
-        <tr class="tabla">
-      <td class="celda">${datajunta[j].anio}</td>
-      <td class="celda">${datajunta[j].porcentaje}</td>
+        <tr class='tabla'>
+      <td class='celda'>${datajunta[j].anio}</td>
+      <td class='celda'>${datajunta[j].porcentaje}</td>
       </tr>`;
     };
     tabladedatos.innerHTML = template;

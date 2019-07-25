@@ -58,11 +58,9 @@ const ordenarData = (dataob) => {
   return indicadorConArray.sort((antes, despues) => {
     return antes[1] - despues[1];
   });
-    
-  
 };
 const funcionOrdenAnios = (ordenSelected, arraydeObjetos) => {
-  if (ordenSelected == 0) {
+  if (ordenSelected === 0) {
     const arrayOrdenadoAsc = arraydeObjetos.sort((unAnio, otroAnio) => unAnio.porcentaje - otroAnio.porcentaje);
     return arrayOrdenadoAsc;
   } else {
