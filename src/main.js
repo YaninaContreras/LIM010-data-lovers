@@ -57,10 +57,9 @@ selectElementPais.addEventListener('change', (event) => {
   // CREANDO LA FUNCIÓN DE LA TABLA 
 
   const creandoTabla = (datajunta) => {
-    let template = `< tr >
+    let template = `
       <th>Año</th>
-      <th>Porcentaje</th>
-  </tr > `;
+      <th>Porcentaje</th> `;
     console.log(datajunta);
 
     for (let j = 0; j < datajunta.length; j++) {
