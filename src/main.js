@@ -86,10 +86,10 @@ selectElementPais.addEventListener('change', (event) => {
     // EVENTO PARA ORDENAR ASCENDENTE Y DESCENDENTE
 
     selectOrderYears.addEventListener('change', (event) => {
-      console.log(worldbank.ordenarData(objectData));
       const ordenSelected = event.target.value;
       console.log(ordenSelected);
       const condicionalOrden = worldbank.funcionOrdenAnios(ordenSelected, arraydeObjetos);
+      console.log(condicionalOrden);
       creandoTabla(condicionalOrden);
     });
 
@@ -100,6 +100,7 @@ selectElementPais.addEventListener('change', (event) => {
     });
     promedio.addEventListener('click', () => {
       contenedorPromedio.innerHTML = worldbank.funcionPromedio(arraydeObjetos);
+      console.log(worldbank.funcionPromedio(arraydeObjetos));
     });
   });
 });
